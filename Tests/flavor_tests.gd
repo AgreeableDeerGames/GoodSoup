@@ -21,7 +21,7 @@ func test1():
 	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
 	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
 	if !compare_flav || !compare_spice:
-		print("flavor compare fail")
+		print("flavor compare fail 1")
 		
 func test2():
 	var fd1: FlavorData = _make_flavor_data(10)
@@ -30,7 +30,7 @@ func test2():
 	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
 	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
 	if !compare_flav || !compare_spice:
-		print("flavor compare fail")
+		print("flavor compare fail 2")
 		
 func test3():
 	var fd1: FlavorData = _make_flavor_data(10)
@@ -39,27 +39,47 @@ func test3():
 	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
 	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
 	if compare_flav || compare_spice:
-		print("flavor compare fail")
+		print("flavor compare fail 3")
 
 func test4():
 	var fd1: FlavorData = _make_flavor_data(10)
-	fd1.bitter = 10.7
+	fd1.bitter = 10.8
 	var fd2: FlavorData = _make_flavor_data(10.2)
 	var tol: FlavorData = _make_flavor_data(.5)
 	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
 	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
 	if compare_flav || !compare_spice:
-		print("flavor compare fail")
+		print("flavor compare fail 4")
 		
 func test5():
 	var fd1: FlavorData = _make_flavor_data(10)
-	fd1.hot_spice = 10.7
+	fd1.hot_spice = 10.8
 	var fd2: FlavorData = _make_flavor_data(10.2)
 	var tol: FlavorData = _make_flavor_data(.5)
 	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
 	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
 	if !compare_flav || compare_spice:
-		print("flavor compare fail")
+		print("flavor compare fail 5")
+		
+func test6():
+	var fd1: FlavorData = _make_flavor_data(10)
+	fd1.hot_spice = 10.7
+	var fd2: FlavorData = _make_flavor_data(10.2)
+	var tol: FlavorData = _make_flavor_data(.1)
+	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
+	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
+	if compare_flav || compare_spice:
+		print("flavor compare fail 6")
+		
+func test7():
+	var fd1: FlavorData = _make_flavor_data(10)
+	fd1.hot_spice = 10.7
+	var fd2: FlavorData = _make_flavor_data(10.01)
+	var tol: FlavorData = _make_flavor_data(.1)
+	var compare_flav: bool = fd1.flavor_equal_with_tolerance(fd2, tol)
+	var compare_spice: bool = fd1.spice_equal_with_tolerance(fd2, tol)
+	if !compare_flav || !compare_spice:
+		print("flavor compare fail 7")
 		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -68,6 +88,8 @@ func _ready() -> void:
 	test3()
 	test4()
 	test5()
+	test6()
+	test6()
 
 
 

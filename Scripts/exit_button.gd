@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 func _button_pressed():
 	# This shuts the program down (immediately).
 	# If we want to close the program more gracefully,
-	# use et_tree().set_auto_accept_quit(false) 
+	# use get_tree().set_auto_accept_quit(false) 
 	get_tree().quit()

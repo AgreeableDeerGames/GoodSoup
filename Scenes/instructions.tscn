@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bvddi7qrve2ku"]
+
+[node name="Instructions" type="Control" unique_id=146027722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2109065373]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -622.625
+offset_top = -360.0
+offset_right = 622.625
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1268449159]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "Instructions"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=876579608]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "The King will request a specific soup. As his personal chef, it is your job to cook him exactly what he has requested. You have given him bad soup too many times. He has assigned you a limited number personal tasters that must validate your work.
+
+Unbeknownst to the King though, you plan to poison his soup. Your poisons will change the flavor of the soup (sometimes quite drastically). Mask the flavor of the poison!
+
+To make a pot of soup, drag and drop ingredients into the poisoned soup broth. Each ingredient will change the flavor and help mask the poison. When you think that your soup will match the King's request, ring the bell to summon a taster. The taster will create a report for you detailing the flavor of your soup. When you are ready or have run out of tasters, send the soup to the King's private chambers.
+
+If his first spoonful matches his request, he will drink all of the soup. If it is too different, he will suspect you, and force you to drink it. Good luck!"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1847799231]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=140948367]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Back"

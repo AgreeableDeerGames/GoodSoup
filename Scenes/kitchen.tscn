@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cfu84dsoj6clf"]
+
+[ext_resource type="PackedScene" uid="uid://dmv18ddewhefb" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+
+[node name="Kitchen" type="Node2D" unique_id=355883739]
+
+[node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
+visible = false
+position = Vector2(699, 519)

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bxk8arec4q5tm" path="res://Scenes/Ingredients/tomato_ingredient.tscn" id="6_jbuf1"]
 [ext_resource type="PackedScene" uid="uid://de7ic6emvr2g3" path="res://Scenes/Ingredients/bellpepper_ingredient.tscn" id="7_cetdd"]
 [ext_resource type="PackedScene" uid="uid://duiy28atr6a67" path="res://Scenes/Ingredients/carrot_ingredient.tscn" id="8_o8uib"]
-[ext_resource type="PackedScene" uid="uid://b0nsdoxwr04u3" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
+[ext_resource type="PackedScene" uid="uid://cbeiup6aneh5" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
 [ext_resource type="Texture2D" uid="uid://72t7ohsy0kjv" path="res://Assets/Bell.png" id="11_ykbxl"]
 [ext_resource type="Script" uid="uid://ce3pwpyutpi88" path="res://Scripts/bell.gd" id="12_32235"]
 

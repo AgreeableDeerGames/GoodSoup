@@ -69,3 +69,7 @@ func _on_load_new_scene(scene_name: String, resetTree: bool, init_fn : Variant =
 	scenes.add_child(scene)
 	transition_scene.get_node("AnimationPlayer").play("fade_to_clear")
 	await transition_scene.get_node("AnimationPlayer").animation_finished
+
+
+func _on_audio_stream_player_finished() -> void:
+	pass # Replace with function body.

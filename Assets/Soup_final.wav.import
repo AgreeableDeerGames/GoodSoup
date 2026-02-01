@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dymo02s4lt3kv"
-path="res://.godot/imported/Soup_Final.wav-08b1695aa0e78e64ec082a007ecbf804.sample"
+path="res://.godot/imported/Soup_final.wav-056d0517229e1f5407044af401c06dbb.sample"
 
 [deps]
 
-source_file="res://Assets/Soup_Final.wav"
-dest_files=["res://.godot/imported/Soup_Final.wav-08b1695aa0e78e64ec082a007ecbf804.sample"]
+source_file="res://Assets/Soup_final.wav"
+dest_files=["res://.godot/imported/Soup_final.wav-056d0517229e1f5407044af401c06dbb.sample"]
 
 [params]
 

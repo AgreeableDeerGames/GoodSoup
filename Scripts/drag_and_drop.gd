@@ -34,8 +34,6 @@ func _process(delta: float) -> void:
 	if (is_being_dropped):
 		# determine if it can go into cauldron, else send it back to the start (or just delete whatever)
 		
-		#Reset the variable to determine position
-		original_position = Vector2.ZERO
 		pass
 	pass
 

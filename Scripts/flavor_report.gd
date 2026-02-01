@@ -1,7 +1,8 @@
 extends Node2D
 
 class_name FlavorReport
-@onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
+#@onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
+@onready var ingredients_ui: GridContainer = $CenterContainer/CanvasGroup/IngredientsUI
 
 @export
 var _ingredients : Array[Ingredient]
@@ -23,7 +24,8 @@ func _ready() -> void:
 	_populate_flavor_data()
 	# Create UI
 	generate_radar_chart()
-	_generate_flavor_pentagon($FlavorData, 10)
+	_generate_flavor_pentagon($CenterContainer/FlavorData, 10)
+	generate_spice_report($CenterContainer.get_node("FlavorData"))
 	_generate_ingredients()
 
 func _central_angle (side_count: int) -> int:
@@ -38,7 +40,7 @@ func _generate_flavor_pentagon(flavor_data: FlavorData, line_width: int):
 		flavor_data.bitter, \
 		flavor_data.umami], \
 		10,
-		$Sprite2D.position)
+		$CenterContainer.get_node("Sprite2D").position)
 	
 		
 	var flavor_line: Line2D = Line2D.new()
@@ -50,7 +52,7 @@ func _generate_flavor_pentagon(flavor_data: FlavorData, line_width: int):
 	
 	
 	
-func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, offset: Vector2):
+func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, offset: Vector2) -> PackedVector2Array:
 	var angle: float = deg_to_rad(_central_angle(magnitudes.size()))
 	var angle_offset: float = deg_to_rad(-90);
 	var pentagon_coords: PackedVector2Array = []
@@ -63,7 +65,7 @@ func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, of
 static func _polar_to_cartesian(angle: float, radius: float) -> Vector2:
 	return Vector2(cos(angle) * radius, sin(angle) * radius)
 
-func generate_radar_chart():
+func generate_radar_chart() -> void:
 	var max_pentagon_data = FlavorData.new();
 	max_pentagon_data.sweet = FlavorData.MAX_FLAVOR
 	max_pentagon_data.sour = FlavorData.MAX_FLAVOR
@@ -97,6 +99,9 @@ func generate_radar_chart():
 	fourth_pentagon_data.umami = FlavorData.MAX_FLAVOR * 3 / 4
 	_generate_flavor_pentagon(fourth_pentagon_data, 1)
 	
+func generate_spice_report(flavor_data: FlavorData) -> void:
+	
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -144,14 +149,14 @@ func _populate_ingredient_flavor_data():
 	#_ingredients_flavor_data.acidity /= _ingredients.size()
 
 func _combine_flavor_data():
-	$FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour
-	$FlavorData.sweet = _ingredients_flavor_data.sweet + _base_soup_flavor_data.sweet + _poison_flavor_data.sweet
-	$FlavorData.salty = _ingredients_flavor_data.salty + _base_soup_flavor_data.salty + _poison_flavor_data.salty
-	$FlavorData.bitter = _ingredients_flavor_data.bitter + _base_soup_flavor_data.bitter + _poison_flavor_data.bitter
-	#$FlavorData.umami = _ingredients_flavor_data.umami + _base_soup_flavor_data.umami + _poison_flavor_data.umami
-	$FlavorData.numbing_spice = _ingredients_flavor_data.numbing_spice + _base_soup_flavor_data.numbing_spice + _poison_flavor_data.numbing_spice
-	$FlavorData.hot_spice = _ingredients_flavor_data.hot_spice + _base_soup_flavor_data.hot_spice + _poison_flavor_data.hot_spice
-	$FlavorData.nasal_spice = _ingredients_flavor_data.nasal_spice + _base_soup_flavor_data.nasal_spice + _poison_flavor_data.nasal_spice
-	#$FlavorData.richness = _ingredients_flavor_data.richness + _base_soup_flavor_data.richness + _poison_flavor_data.richness
-	#$FlavorData.acidity = _ingredients_flavor_data.acidity + _base_soup_flavor_data.acidity + _poison_flavor_data.acidity
+	$CenterContainer/FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour
+	$CenterContainer/FlavorData.sweet = _ingredients_flavor_data.sweet + _base_soup_flavor_data.sweet + _poison_flavor_data.sweet
+	$CenterContainer/FlavorData.salty = _ingredients_flavor_data.salty + _base_soup_flavor_data.salty + _poison_flavor_data.salty
+	$CenterContainer/FlavorData.bitter = _ingredients_flavor_data.bitter + _base_soup_flavor_data.bitter + _poison_flavor_data.bitter
+	$CenterContainer/FlavorData.umami = _ingredients_flavor_data.umami + _base_soup_flavor_data.umami + _poison_flavor_data.umami
+	$CenterContainer/FlavorData.numbing_spice = _ingredients_flavor_data.numbing_spice + _base_soup_flavor_data.numbing_spice + _poison_flavor_data.numbing_spice
+	$CenterContainer/FlavorData.hot_spice = _ingredients_flavor_data.hot_spice + _base_soup_flavor_data.hot_spice + _poison_flavor_data.hot_spice
+	$CenterContainer/FlavorData.nasal_spice = _ingredients_flavor_data.nasal_spice + _base_soup_flavor_data.nasal_spice + _poison_flavor_data.nasal_spice
+	$CenterContainer/FlavorData.richness = _ingredients_flavor_data.richness + _base_soup_flavor_data.richness + _poison_flavor_data.richness
+	$CenterContainer/FlavorData.acidity = _ingredients_flavor_data.acidity + _base_soup_flavor_data.acidity + _poison_flavor_data.acidity
 	

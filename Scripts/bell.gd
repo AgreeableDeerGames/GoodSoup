@@ -14,14 +14,14 @@ func _on_pressed() -> void:
 	var poison : FlavorData = get_parent().poison
 	
 	# Create report to click
-	_create_flavor_report(soup, poison, ingredients)
+	create_flavor_report(soup, poison, ingredients)
 	
 	# The ingredients gets captured. Call this on the newly instatiated scene
 	var setup_fn = func (x : FlavorReport): x.setup_scene(ingredients, soup, poison, false)
 	
-	Signals.emit_signal("load_new_scene", "res://Scenes/flavor_report.tscn", false, setup_fn)
+	Signals.emit_signal("load_new_scene", "res://Scenes/flavor_report.tscn", false, setup_fn, false)
 
-func _create_flavor_report(soup : FlavorData, poison : FlavorData, ingredients : Array[Ingredient]):
+func create_flavor_report(soup : FlavorData, poison : FlavorData, ingredients : Array[Ingredient]):
 	var flavor_reports = get_parent().get_node("FlavorReports")
 	var flavorReportButton : ViewFlavorReport = load("res://Scenes/view_flavor_report.tscn").instantiate()
 	flavorReportButton.setup(soup, poison, ingredients)

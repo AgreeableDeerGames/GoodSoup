@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuiphrilxdgcw"]
 
-[ext_resource type="Script" uid="uid://7odegris5bt1" path="res://Scenes/button.gd" id="1_a7uql"]
+[ext_resource type="Script" uid="uid://dgstfmd58uxgw" path="res://Scripts/kitchen_button.gd" id="1_a7uql"]
 
 [node name="KitchenButton" type="Node2D" unique_id=638048668]
 

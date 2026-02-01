@@ -30,5 +30,6 @@ func _on_pressed() -> void:
 	
 	# The ingredients gets captured. Call this on the newly instatiated scene
 	var setup_fn = func (x : FlavorReport): x.setup_scene(_ingredients, _soup, _poison)
+
 	
-	Signals.emit_signal("load_new_scene", "res://Scenes/flavor_report.tscn", false, setup_fn)
+	#Signals.emit_signal("load_new_scene", "res://Scenes/flavor_report.tscn", false, setup_fn)

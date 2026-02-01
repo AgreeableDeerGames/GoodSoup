@@ -13,10 +13,21 @@ var _poison_flavor_data : FlavorData
 @export
 var _ingredients_flavor_data : FlavorData
 
-func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorData, poision_flavor_data: FlavorData) -> void:
+func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorData, poision_flavor_data: FlavorData, is_play: bool) -> void:
 	_ingredients = ingredients
 	_base_soup_flavor_data = base_Soup_flavor_data
 	_poison_flavor_data = poision_flavor_data
+	if (is_play):
+		$BackButton.hide()
+		$BackButton/HBoxContainer/Button.disabled = true
+		$KitchenButton.show()
+		$KitchenButton/HBoxContainer/Button.disabled = false
+	else:
+		
+		$BackButton.show()
+		$BackButton/HBoxContainer/Button.disabled = false
+		$KitchenButton.hide()
+		$KitchenButton/HBoxContainer/Button.disabled = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

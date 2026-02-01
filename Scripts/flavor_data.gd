@@ -2,21 +2,23 @@ extends Node
 
 class_name FlavorData
 
-@export
+static var MAX_FLAVOR = 10
+
+@export_range(0, 10, 0.1, "0 - 10")
 var sweet: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var sour: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var salty: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var bitter: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var umami: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var numbing_spice: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var hot_spice: float = 0
-@export
+@export_range(0, 10, 0.1, "0 - 10")
 var nasal_spice: float = 0
 
 func _flavor_as_array() -> Array[float]:

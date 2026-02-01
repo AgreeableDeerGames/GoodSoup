@@ -1,5 +1,7 @@
 extends TextureButton
 
+var target_soup
+
 func _kill_taster() -> void:
 	get_parent().get_node("DeadTasters").kill_taster()
 	get_parent().get_node("LiveTasters").kill_taster()
@@ -18,7 +20,8 @@ func _on_pressed() -> void:
 	var soup : FlavorData = FlavorData.new()
 	var poison : FlavorData = get_parent().poison
 	
-	if get_parent().get_node("LiveTasters").tasters.size() > 0:
+
+	if get_parent().get_node("LiveTasters").tasters.size() > 4:
 		# Create report to click
 		create_flavor_report(soup, poison, ingredients)
 
@@ -34,8 +37,8 @@ func _on_pressed() -> void:
 		final_soup_flavor_report._populate_ingredient_flavor_data()
 		var final_soup_flavor_data = _combine_flavor_data(final_soup_flavor_report)
 		
-		# TODO: Change the first soup data to be the target
-		var setup_fn = func (x : EndScene): x.setup_scene(final_soup_flavor_data, final_soup_flavor_data)
+		
+		var setup_fn = func (x : EndScene): x.setup_scene(target_soup, final_soup_flavor_data)
 		Signals.emit_signal("load_new_scene", "res://Scenes/end_scene.tscn", false, setup_fn)
 	
 	_kill_taster()
@@ -56,8 +59,8 @@ func _combine_flavor_data(final_soup_flavor_report: FlavorReport) -> FlavorData:
 	flavor_data.acidity = final_soup_flavor_report._ingredients_flavor_data.acidity + final_soup_flavor_report._base_soup_flavor_data.acidity + final_soup_flavor_report._poison_flavor_data.acidity
 	return flavor_data
 
-
 func create_flavor_report(soup : FlavorData, poison : FlavorData, ingredients : Array[Ingredient]):
+	target_soup = soup
 	var flavor_reports = get_parent().get_node("FlavorReports")
 	var flavorReportButton : ViewFlavorReport = load("res://Scenes/view_flavor_report.tscn").instantiate()
 	flavorReportButton.setup(soup, poison, ingredients)

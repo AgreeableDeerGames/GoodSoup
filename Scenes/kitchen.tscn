@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
 [ext_resource type="Texture2D" uid="uid://bjik7p4yl2mg2" path="res://Assets/CastleBackground.jpg" id="1_4clir"]
-[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 [ext_resource type="PackedScene" uid="uid://bu6os5jiu4cmv" path="res://Scenes/live_tasters.tscn" id="1_kr0tx"]
 [ext_resource type="Script" uid="uid://bvmnuti82cp8x" path="res://Scripts/kitchen.gd" id="1_t5hpn"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
@@ -31,9 +30,6 @@ position = Vector2(570, 363)
 position = Vector2(639.75, 360.25)
 scale = Vector2(0.6669271, 0.6606481)
 texture = ExtResource("2_23qos")
-
-[node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
-position = Vector2(677, 457)
 
 [node name="OnionIngredient" parent="." unique_id=1178432824 instance=ExtResource("3_lvc4q")]
 position = Vector2(61, 36)
@@ -73,5 +69,12 @@ texture_disabled = ExtResource("11_ykbxl")
 texture_focused = ExtResource("11_ykbxl")
 script = ExtResource("12_32235")
 metadata/_edit_lock_ = true
+
+[node name="FlavorReports" type="HBoxContainer" parent="." unique_id=1004301189]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 381.0
+offset_top = 494.0
+offset_right = 831.0
+offset_bottom = 550.0
 
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]

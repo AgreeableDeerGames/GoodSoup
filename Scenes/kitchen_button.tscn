@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cuiphrilxdgcw"]
+
+[ext_resource type="Script" uid="uid://7odegris5bt1" path="res://Scenes/button.gd" id="1_a7uql"]
+
+[node name="KitchenButton" type="Node2D" unique_id=638048668]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1540514774]
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=798898691]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Cook!"
+script = ExtResource("1_a7uql")
+
+[connection signal="pressed" from="HBoxContainer/Button" to="HBoxContainer/Button" method="_on_pressed"]

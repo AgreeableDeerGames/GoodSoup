@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
-[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+[ext_resource type="Texture2D" uid="uid://bjik7p4yl2mg2" path="res://Assets/CastleBackground.jpg" id="1_4clir"]
+[ext_resource type="PackedScene" uid="uid://bu6os5jiu4cmv" path="res://Scenes/live_tasters.tscn" id="1_kr0tx"]
 [ext_resource type="Script" uid="uid://bvmnuti82cp8x" path="res://Scripts/kitchen.gd" id="1_t5hpn"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
 [ext_resource type="PackedScene" uid="uid://yu8sgabt5i6b" path="res://Scenes/Ingredients/onion_ingredient.tscn" id="3_lvc4q"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bxk8arec4q5tm" path="res://Scenes/Ingredients/tomato_ingredient.tscn" id="6_jbuf1"]
 [ext_resource type="PackedScene" uid="uid://de7ic6emvr2g3" path="res://Scenes/Ingredients/bellpepper_ingredient.tscn" id="7_cetdd"]
 [ext_resource type="PackedScene" uid="uid://duiy28atr6a67" path="res://Scenes/Ingredients/carrot_ingredient.tscn" id="8_o8uib"]
+[ext_resource type="PackedScene" uid="uid://b33juydpufhes" path="res://Scenes/dead_tasters.tscn" id="10_2cl3g"]
 [ext_resource type="PackedScene" uid="uid://cbeiup6aneh5" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
 [ext_resource type="Texture2D" uid="uid://72t7ohsy0kjv" path="res://Assets/Bell.png" id="11_ykbxl"]
 [ext_resource type="Script" uid="uid://ce3pwpyutpi88" path="res://Scripts/bell.gd" id="12_32235"]
@@ -16,13 +18,18 @@
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 script = ExtResource("1_t5hpn")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1529682758]
+position = Vector2(615, 196)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4clir")
+
+[node name="LiveTasters" parent="." unique_id=1101176070 instance=ExtResource("1_kr0tx")]
+position = Vector2(570, 363)
+
 [node name="KitchenBaseSprite" type="Sprite2D" parent="." unique_id=1609933474]
 position = Vector2(639.75, 360.25)
 scale = Vector2(0.6669271, 0.6606481)
 texture = ExtResource("2_23qos")
-
-[node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
-position = Vector2(677, 457)
 
 [node name="OnionIngredient" parent="." unique_id=1178432824 instance=ExtResource("3_lvc4q")]
 position = Vector2(61, 36)
@@ -41,6 +48,9 @@ position = Vector2(170, 117)
 
 [node name="CarrotIngredient" parent="." unique_id=140818365 instance=ExtResource("8_o8uib")]
 position = Vector2(280, 117)
+
+[node name="DeadTasters" parent="." unique_id=691247600 instance=ExtResource("10_2cl3g")]
+position = Vector2(-30, 640)
 
 [node name="Cauldron" parent="." unique_id=436779248 instance=ExtResource("10_lkloo")]
 position = Vector2(962, 508)

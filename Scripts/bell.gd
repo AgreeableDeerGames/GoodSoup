@@ -1,7 +1,13 @@
 extends TextureButton
 
+func _kill_taster() -> void:
+	get_parent().get_node("DeadTasters").kill_taster()
+	get_parent().get_node("LiveTasters").kill_taster()
 
 func _on_pressed() -> void:
+	
+	_kill_taster()
+	
 	var cauldron = self.get_parent().get_node("Cauldron")
 	var ingredientsNodes : Array[Node] = cauldron.get_node("Ingredients").get_children()
 	var ingredients : Array[Ingredient]

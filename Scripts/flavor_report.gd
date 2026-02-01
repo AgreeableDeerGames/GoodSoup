@@ -17,6 +17,7 @@ func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data_init: Fl
 	_ingredients = ingredients
 	base_soup_flavor_data = base_Soup_flavor_data_init
 	_poison_flavor_data = poision_flavor_data
+	_is_play = is_play
 	if (is_play):
 		$BackButton.hide()
 		$BackButton/HBoxContainer/Button.disabled = true
@@ -129,8 +130,11 @@ func _generate_ingredients():
 		ingredients_ui.add_child(textureRect)
 
 func _populate_flavor_data():
-	_populate_ingredient_flavor_data()
-	_combine_flavor_data()
+	if _is_play:
+		$CenterContainer/FlavorData.copy_from(_base_soup_flavor_data)
+	else:
+		_populate_ingredient_flavor_data()
+		_combine_flavor_data()
 	
 func _populate_ingredient_flavor_data():
 	_ingredients_flavor_data = FlavorData.new()

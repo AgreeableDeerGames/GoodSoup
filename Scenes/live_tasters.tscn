@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bu6os5jiu4cmv"]
+
+[ext_resource type="Script" uid="uid://b3qrgm002aoev" path="res://Scripts/live_tasters.gd" id="1_8awwt"]
+[ext_resource type="Texture2D" uid="uid://ytjar3clgn3p" path="res://Assets/TasterSmile.png" id="1_xqvk3"]
+
+[node name="LiveTasters" type="Node2D" unique_id=1101176070]
+script = ExtResource("1_8awwt")
+
+[node name="Taster5" type="Sprite2D" parent="." unique_id=1116484897]
+modulate = Color(0.51007515, 0.51007515, 0.51007515, 1)
+position = Vector2(200, 5)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_xqvk3")
+
+[node name="Taster4" type="Sprite2D" parent="." unique_id=1889970304]
+modulate = Color(0.6288588, 0.62885886, 0.6288588, 1)
+position = Vector2(158, 0.9999981)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_xqvk3")
+
+[node name="Taster3" type="Sprite2D" parent="." unique_id=809085222]
+modulate = Color(0.7079665, 0.70796657, 0.7079662, 1)
+position = Vector2(112, 3)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("1_xqvk3")
+
+[node name="Taster2" type="Sprite2D" parent="." unique_id=101625429]
+modulate = Color(0.7852174, 0.78521717, 0.7852169, 1)
+position = Vector2(55.000008, -3)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_xqvk3")
+
+[node name="Taster1" type="Sprite2D" parent="." unique_id=1824214464]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_xqvk3")

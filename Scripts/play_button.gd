@@ -18,6 +18,7 @@ func _on_pressed() -> void:
 	var ingredients : Array[Ingredient]
 	# Randomize soup
 	var soup : FlavorData = FlavorData.new()
+	soup.generate_values()
 	# No Poison
 	var poison : FlavorData = FlavorData.new()
 	

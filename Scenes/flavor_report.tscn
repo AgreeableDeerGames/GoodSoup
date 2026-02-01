@@ -3,30 +3,47 @@
 [ext_resource type="Texture2D" uid="uid://c5avl70qvgues" path="res://Assets/parchment.png" id="1_b5ke7"]
 [ext_resource type="Script" uid="uid://cligny2xyq5jl" path="res://Scripts/flavor_report.gd" id="1_vji58"]
 [ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="3_gq7h2"]
+[ext_resource type="StyleBox" uid="uid://c1ffhuf2eiper" path="res://Assets/checkbox.tres" id="4_gq7h2"]
 
 [node name="FlavorReport" type="Node2D" unique_id=522384576]
 script = ExtResource("1_vji58")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2100698467]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=771518529]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer" unique_id=2100698467]
 position = Vector2(641.5, 360.5)
 scale = Vector2(0.66614574, 0.6675926)
 texture = ExtResource("1_b5ke7")
 
-[node name="FlavorData" type="Node" parent="." unique_id=1055033563]
+[node name="FlavorData" type="Node" parent="CenterContainer" unique_id=1000443721]
 script = ExtResource("3_gq7h2")
 metadata/_custom_type_script = "uid://mv8g3k23j761"
 
-[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1474076038]
+[node name="CanvasGroup" type="CanvasGroup" parent="CenterContainer" unique_id=1474076038]
 position = Vector2(433, 105)
-metadata/_edit_group_ = true
 
-[node name="IngredientsLabel" type="Label" parent="CanvasGroup" unique_id=728855442]
+[node name="IngredientsLabel" type="Label" parent="CenterContainer/CanvasGroup" unique_id=728855442]
 offset_right = 138.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ingredients used: "
 
-[node name="TasteLabel" type="Label" parent="CanvasGroup" unique_id=573850421]
+[node name="IngredientsUI" type="GridContainer" parent="CenterContainer/CanvasGroup" unique_id=183785629]
+custom_minimum_size = Vector2(50, 50)
+offset_top = 23.0
+offset_right = 479.0
+offset_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../IngredientsLabel")
+focus_neighbor_bottom = NodePath("../TasteLabel")
+theme_override_constants/h_separation = -5
+theme_override_constants/v_separation = -5
+columns = 7
+
+[node name="TasteLabel" type="Label" parent="CenterContainer/CanvasGroup" unique_id=573850421]
 offset_left = -4.0
 offset_top = 126.0
 offset_right = 134.0
@@ -36,7 +53,7 @@ text = " Core Flavors:"
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Sweet" type="Label" parent="CanvasGroup/TasteLabel" unique_id=1824482098]
+[node name="Sweet" type="Label" parent="CenterContainer/CanvasGroup/TasteLabel" unique_id=1824482098]
 layout_mode = 0
 offset_left = 194.0
 offset_right = 332.0
@@ -44,7 +61,7 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sweet"
 
-[node name="Sour" type="Label" parent="CanvasGroup/TasteLabel" unique_id=782792218]
+[node name="Sour" type="Label" parent="CenterContainer/CanvasGroup/TasteLabel" unique_id=782792218]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 74.0
@@ -53,7 +70,7 @@ offset_bottom = 97.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sour"
 
-[node name="Salty" type="Label" parent="CanvasGroup/TasteLabel" unique_id=76256586]
+[node name="Salty" type="Label" parent="CenterContainer/CanvasGroup/TasteLabel" unique_id=76256586]
 layout_mode = 0
 offset_left = 285.0
 offset_top = 201.0
@@ -62,7 +79,7 @@ offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Salty"
 
-[node name="Bitter" type="Label" parent="CanvasGroup/TasteLabel" unique_id=286078941]
+[node name="Bitter" type="Label" parent="CenterContainer/CanvasGroup/TasteLabel" unique_id=286078941]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 201.0
@@ -71,7 +88,7 @@ offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Bitter"
 
-[node name="Savory" type="Label" parent="CanvasGroup/TasteLabel" unique_id=1432629128]
+[node name="Savory" type="Label" parent="CenterContainer/CanvasGroup/TasteLabel" unique_id=1432629128]
 layout_mode = 0
 offset_left = 55.0
 offset_top = 85.0
@@ -80,15 +97,150 @@ offset_bottom = 108.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Savory"
 
-[node name="IngredientsUI" type="GridContainer" parent="CanvasGroup" unique_id=183785629]
-custom_minimum_size = Vector2(50, 50)
+[node name="Spice" type="Label" parent="CenterContainer/CanvasGroup" unique_id=165083683]
+offset_left = 8.0
+offset_top = 375.0
+offset_right = 325.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The spice levels are: "
+
+[node name="Spice2" type="Label" parent="CenterContainer/CanvasGroup/Spice" unique_id=330512180]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 35.0
+offset_right = 339.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "primarily experienced"
+
+[node name="Spice3" type="Label" parent="CenterContainer/CanvasGroup/Spice" unique_id=1385809918]
+layout_mode = 0
+offset_left = 175.0
+offset_top = -31.0
+offset_right = 492.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Low                                             High"
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice3" unique_id=1194036492]
+layout_mode = 0
 offset_top = 22.0
-offset_right = 479.0
-offset_bottom = 132.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-focus_neighbor_top = NodePath("../IngredientsLabel")
-focus_neighbor_bottom = NodePath("../TasteLabel")
-theme_override_constants/h_separation = -5
-theme_override_constants/v_separation = -5
-columns = 7
+offset_right = 30.0
+offset_bottom = 52.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice3/Panel" unique_id=1413777733]
+layout_mode = 0
+offset_left = 55.0
+offset_right = 85.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice3/Panel/Panel" unique_id=1597831505]
+layout_mode = 0
+offset_left = 55.0
+offset_right = 85.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice3/Panel/Panel/Panel" unique_id=1047719958]
+layout_mode = 0
+offset_left = 55.0
+offset_right = 85.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice3/Panel/Panel/Panel/Panel" unique_id=569101413]
+layout_mode = 0
+offset_left = 55.0
+offset_right = 85.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Spice4" type="Label" parent="CenterContainer/CanvasGroup/Spice" unique_id=1258822331]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 23.0
+offset_right = 459.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "As numbness    On Tongue    In nose"
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice4" unique_id=327104506]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 22.0
+offset_right = 60.0
+offset_bottom = 52.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice4/Panel" unique_id=204504558]
+layout_mode = 0
+offset_left = 115.0
+offset_right = 145.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/Spice/Spice4/Panel/Panel" unique_id=1779961241]
+layout_mode = 0
+offset_left = 85.0
+offset_right = 115.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="RichnessAcidity" type="Label" parent="CenterContainer/CanvasGroup" unique_id=1746218790]
+offset_left = 10.0
+offset_top = 458.0
+offset_right = 441.0
+offset_bottom = 481.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The richness and acidity are"
+metadata/_edit_group_ = true
+
+[node name="RichnessAcidity2" type="Label" parent="CenterContainer/CanvasGroup/RichnessAcidity" unique_id=175547582]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 19.0
+offset_right = 406.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Rich                Balanced                 Acidic"
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/RichnessAcidity/RichnessAcidity2" unique_id=85101061]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 30.0
+offset_bottom = 52.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/RichnessAcidity/RichnessAcidity2/Panel" unique_id=642864934]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/RichnessAcidity/RichnessAcidity2/Panel/Panel" unique_id=820051493]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/RichnessAcidity/RichnessAcidity2/Panel/Panel/Panel" unique_id=122986477]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="Panel" type="Panel" parent="CenterContainer/CanvasGroup/RichnessAcidity/RichnessAcidity2/Panel/Panel/Panel/Panel" unique_id=1174793183]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme_override_styles/panel = ExtResource("4_gq7h2")

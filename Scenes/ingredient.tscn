@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://ck16ymroqhny3" path="res://Scripts/ingredient.gd" id="1_vp2j4"]
 [ext_resource type="PackedScene" uid="uid://cv0jr4yvt1op" path="res://Scenes/flavor_data.tscn" id="4_vp2j4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp2j4"]
+size = Vector2(103, 197)
+
 [node name="Ingredient" type="Node2D" unique_id=30938857]
 script = ExtResource("1_vp2j4")
 
@@ -17,3 +20,9 @@ position = Vector2(-1, 1)
 clickable_area = Rect2(-50, -100, 100, 200)
 
 [node name="FlavorData" parent="." unique_id=1040921317 instance=ExtResource("4_vp2j4")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=925610405]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1922979589]
+position = Vector2(3.5, 3.5)
+shape = SubResource("RectangleShape2D_vp2j4")

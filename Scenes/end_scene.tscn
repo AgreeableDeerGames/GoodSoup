@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bsicxbl7u6edp"]
+
+[ext_resource type="Script" uid="uid://b2dwsx7pmf3sl" path="res://Scripts/end_scene.gd" id="1_5pkqa"]
+[ext_resource type="Script" uid="uid://hv1jwv35guvy" path="res://Scenes/main_menu_button.gd" id="2_5rked"]
+
+[node name="EndScene" type="Control" unique_id=1854814449]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pkqa")
+
+[node name="VictoryBox" type="HBoxContainer" parent="." unique_id=2143059160]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -24.5
+offset_right = 260.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Victory" type="Label" parent="VictoryBox" unique_id=1027866266]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "The king is pleased, one final time! 
+He drank all of you special soup!
+\"Good Soup!\", he says as he perishes. "
+horizontal_alignment = 1
+
+[node name="DefeatBox" type="HBoxContainer" parent="." unique_id=1319884871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -24.5
+offset_right = 260.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Defeat" type="Label" parent="DefeatBox" unique_id=431176928]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "The king is unhappy with your soup! 
+He refuses to drink any of it!
+\"You will drink this!\", you hear as you perish. "
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=1425564522]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 628.0
+offset_right = 1238.0
+offset_bottom = 681.0
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+script = ExtResource("2_5rked")
+
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_pressed"]

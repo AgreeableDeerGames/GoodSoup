@@ -23,7 +23,6 @@ func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorD
 		$KitchenButton.show()
 		$KitchenButton/HBoxContainer/Button.disabled = false
 	else:
-		
 		$BackButton.show()
 		$BackButton/HBoxContainer/Button.disabled = false
 		$KitchenButton.hide()

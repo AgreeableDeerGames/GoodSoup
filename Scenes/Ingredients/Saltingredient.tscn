@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dhsy0idrghskg"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_wpt4p"]
+[ext_resource type="Texture2D" uid="uid://obye2dqxswwc" path="res://Assets/Salt.PNG" id="2_gu8q3"]
+
+[node name="Ingredient" unique_id=30938857 instance=ExtResource("1_wpt4p")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+position = Vector2(6.000001, 6.000004)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_gu8q3")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+position = Vector2(-1, -1)
+scale = Vector2(0.2, 0.2)

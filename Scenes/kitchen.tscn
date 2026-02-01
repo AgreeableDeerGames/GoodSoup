@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
-[ext_resource type="PackedScene" uid="uid://fji6y2b4ganf" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
+[ext_resource type="PackedScene" uid="uid://yu8sgabt5i6b" path="res://Scenes/Ingredients/OnionIngredient.tscn" id="3_lvc4q"]
+[ext_resource type="PackedScene" uid="uid://d0dgtosn5vwj2" path="res://Scenes/Ingredients/MushroomIngredient.tscn" id="4_6pjjr"]
+[ext_resource type="PackedScene" uid="uid://dhsy0idrghskg" path="res://Scenes/Ingredients/Saltingredient.tscn" id="5_pb1w8"]
+[ext_resource type="PackedScene" uid="uid://bxk8arec4q5tm" path="res://Scenes/Ingredients/Tomatoingredient.tscn" id="6_jbuf1"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 
@@ -11,41 +15,16 @@ scale = Vector2(0.6669271, 0.6606481)
 texture = ExtResource("2_23qos")
 
 [node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
-position = Vector2(699, 519)
+position = Vector2(677, 457)
 
-[node name="ItemLocation1" type="Node2D" parent="." unique_id=1534312802]
-position = Vector2(62, 58)
-metadata/_edit_group_ = true
+[node name="OnionIngredient" parent="." unique_id=1178432824 instance=ExtResource("3_lvc4q")]
+position = Vector2(61, 36)
 
-[node name="ItemLocation2" type="Node2D" parent="." unique_id=950766105]
-position = Vector2(178, 70)
+[node name="MushroomIngredient" parent="." unique_id=116923129 instance=ExtResource("4_6pjjr")]
+position = Vector2(184, 50)
 
-[node name="ItemLocation3" type="Node2D" parent="." unique_id=705315070]
-position = Vector2(276, 63)
+[node name="Ingredient2" parent="." unique_id=60769435 instance=ExtResource("5_pb1w8")]
+position = Vector2(284, 52)
 
-[node name="ItemLocation4" type="Node2D" parent="." unique_id=607737948]
-position = Vector2(62, 144)
-
-[node name="ItemLocation5" type="Node2D" parent="." unique_id=1308477620]
-position = Vector2(175, 146)
-
-[node name="ItemLocation6" type="Node2D" parent="." unique_id=104447353]
-position = Vector2(271, 144)
-
-[node name="ItemLocation7" type="Node2D" parent="." unique_id=505705319]
-position = Vector2(69, 221)
-
-[node name="ItemLocation8" type="Node2D" parent="." unique_id=1566169136]
-position = Vector2(182, 221)
-
-[node name="ItemLocation9" type="Node2D" parent="." unique_id=412081889]
-position = Vector2(278, 216)
-
-[node name="ItemLocation10" type="Node2D" parent="." unique_id=1606460501]
-position = Vector2(70, 310)
-
-[node name="ItemLocation11" type="Node2D" parent="." unique_id=410508725]
-position = Vector2(183, 307)
-
-[node name="ItemLocation12" type="Node2D" parent="." unique_id=1482915025]
-position = Vector2(280, 304)
+[node name="Ingredient3" parent="." unique_id=519104041 instance=ExtResource("6_jbuf1")]
+position = Vector2(56, 119)

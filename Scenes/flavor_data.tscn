@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cv0jr4yvt1op"]
+
+[ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="1_2iejx"]
+
+[node name="FlavorData" type="Node" unique_id=1040921317]
+script = ExtResource("1_2iejx")

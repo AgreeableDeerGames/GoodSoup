@@ -19,25 +19,29 @@ texture = ExtResource("1_b5ke7")
 
 [node name="FlavorData" type="Node" parent="CenterContainer" unique_id=1000443721]
 script = ExtResource("3_gq7h2")
-sweet = 6.7
-sour = 4.0
-salty = 4.0
-bitter = 6.5
-umami = 3.4
-numbing_spice = 7.0
-hot_spice = 4.0
-nasal_spice = 10.0
 metadata/_custom_type_script = "uid://mv8g3k23j761"
 
 [node name="CanvasGroup" type="CanvasGroup" parent="CenterContainer" unique_id=1474076038]
 position = Vector2(433, 105)
-metadata/_edit_group_ = true
 
 [node name="IngredientsLabel" type="Label" parent="CenterContainer/CanvasGroup" unique_id=728855442]
 offset_right = 138.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ingredients used: "
+
+[node name="IngredientsUI" type="GridContainer" parent="CenterContainer/CanvasGroup" unique_id=183785629]
+custom_minimum_size = Vector2(50, 50)
+offset_top = 23.0
+offset_right = 479.0
+offset_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../IngredientsLabel")
+focus_neighbor_bottom = NodePath("../TasteLabel")
+theme_override_constants/h_separation = -5
+theme_override_constants/v_separation = -5
+columns = 7
 
 [node name="TasteLabel" type="Label" parent="CenterContainer/CanvasGroup" unique_id=573850421]
 offset_left = -4.0

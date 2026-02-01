@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bvddi7qrve2ku"]
 
+[ext_resource type="PackedScene" uid="uid://bsdpsjkul0byw" path="res://Scenes/back_button.tscn" id="1_8p7yn"]
+
 [node name="Instructions" type="Control" unique_id=146027722]
 layout_mode = 3
 anchors_preset = 15
@@ -41,11 +43,5 @@ To make a pot of soup, drag and drop ingredients into the poisoned soup broth. E
 If his first spoonful matches his request, he will drink all of the soup. If it is too different, he will suspect you, and force you to drink it. Good luck!"
 autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1847799231]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=140948367]
-layout_mode = 2
-theme_override_font_sizes/font_size = 46
-text = "Back"
+[node name="BackButton" parent="VBoxContainer" unique_id=638048668 instance=ExtResource("1_8p7yn")]
+position = Vector2(1300, 700)

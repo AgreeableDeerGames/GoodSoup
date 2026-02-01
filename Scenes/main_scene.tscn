@@ -1,4 +1,8 @@
 [gd_scene format=3 uid="uid://dguyqxa787s0c"]
 
+[ext_resource type="PackedScene" uid="uid://bcrv7qf0qcmcg" path="res://Scenes/scene_manager.tscn" id="2_6l7je"]
+
 [node name="MainScene" type="Node2D" unique_id=1212900448]
 metadata/_edit_group_ = true
+
+[node name="SceneManager" parent="." unique_id=1030478623 instance=ExtResource("2_6l7je")]

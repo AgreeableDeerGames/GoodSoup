@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bjik7p4yl2mg2" path="res://Assets/CastleBackground.jpg" id="1_4clir"]
 [ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 [ext_resource type="PackedScene" uid="uid://bu6os5jiu4cmv" path="res://Scenes/live_tasters.tscn" id="1_kr0tx"]
+[ext_resource type="Script" uid="uid://bvmnuti82cp8x" path="res://Scripts/kitchen.gd" id="1_t5hpn"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
 [ext_resource type="PackedScene" uid="uid://yu8sgabt5i6b" path="res://Scenes/Ingredients/onion_ingredient.tscn" id="3_lvc4q"]
 [ext_resource type="PackedScene" uid="uid://d0dgtosn5vwj2" path="res://Scenes/Ingredients/mushroom_ingredient.tscn" id="4_6pjjr"]
@@ -11,8 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://de7ic6emvr2g3" path="res://Scenes/Ingredients/bellpepper_ingredient.tscn" id="7_cetdd"]
 [ext_resource type="PackedScene" uid="uid://duiy28atr6a67" path="res://Scenes/Ingredients/carrot_ingredient.tscn" id="8_o8uib"]
 [ext_resource type="PackedScene" uid="uid://b33juydpufhes" path="res://Scenes/dead_tasters.tscn" id="10_2cl3g"]
+[ext_resource type="PackedScene" uid="uid://cbeiup6aneh5" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
+[ext_resource type="Texture2D" uid="uid://72t7ohsy0kjv" path="res://Assets/Bell.png" id="11_ykbxl"]
+[ext_resource type="Script" uid="uid://ce3pwpyutpi88" path="res://Scripts/bell.gd" id="12_32235"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
+script = ExtResource("1_t5hpn")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1529682758]
 position = Vector2(615, 196)
@@ -50,3 +55,22 @@ position = Vector2(280, 117)
 
 [node name="DeadTasters" parent="." unique_id=691247600 instance=ExtResource("10_2cl3g")]
 position = Vector2(-30, 640)
+[node name="Cauldron" parent="." unique_id=436779248 instance=ExtResource("10_lkloo")]
+position = Vector2(962, 508)
+metadata/_edit_lock_ = true
+
+[node name="Bell" type="TextureButton" parent="." unique_id=522867944]
+offset_left = 700.0
+offset_top = 290.0
+offset_right = 1212.0
+offset_bottom = 802.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("11_ykbxl")
+texture_pressed = ExtResource("11_ykbxl")
+texture_hover = ExtResource("11_ykbxl")
+texture_disabled = ExtResource("11_ykbxl")
+texture_focused = ExtResource("11_ykbxl")
+script = ExtResource("12_32235")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]

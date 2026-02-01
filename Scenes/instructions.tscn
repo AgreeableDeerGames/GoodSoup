@@ -44,4 +44,4 @@ If his first spoonful matches his request, he will drink all of the soup. If it 
 autowrap_mode = 3
 
 [node name="BackButton" parent="VBoxContainer" unique_id=638048668 instance=ExtResource("1_8p7yn")]
-position = Vector2(1300, 700)
+position = Vector2(1100, 650)

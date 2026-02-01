@@ -26,7 +26,6 @@ metadata/_custom_type_script = "uid://mv8g3k23j761"
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1474076038]
 position = Vector2(433, 105)
-metadata/_edit_group_ = true
 
 [node name="IngredientsLabel" type="Label" parent="CanvasGroup" unique_id=728855442]
 offset_right = 138.0
@@ -87,3 +86,37 @@ offset_right = 193.0
 offset_bottom = 108.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Savory"
+
+[node name="Spice" type="Label" parent="CanvasGroup" unique_id=165083683]
+offset_left = 8.0
+offset_top = 375.0
+offset_right = 325.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The spice levels are ________________________"
+
+[node name="Spice2" type="Label" parent="CanvasGroup/Spice" unique_id=330512180]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 30.0
+offset_right = 375.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "primarily experienced ________________________"
+
+[node name="RichnessAcidity" type="Label" parent="CanvasGroup" unique_id=1746218790]
+offset_left = 8.0
+offset_top = 443.0
+offset_right = 228.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The richness and acidity are _______________________________"
+
+[node name="RichnessAcidity2" type="Label" parent="CanvasGroup/RichnessAcidity" unique_id=1486597707]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 32.0
+offset_right = 425.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "_______________________________________________________________"

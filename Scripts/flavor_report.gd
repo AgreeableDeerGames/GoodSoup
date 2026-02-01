@@ -5,6 +5,7 @@ extends Node2D
 func _ready() -> void:
 	generate_radar_chart()
 	_generate_flavor_pentagon($FlavorData, 10)
+	generate_spice_report($FlavorData)
 	
 
 func _central_angle (side_count: int) -> int:
@@ -31,7 +32,7 @@ func _generate_flavor_pentagon(flavor_data: FlavorData, line_width: int):
 	
 	
 	
-func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, offset: Vector2):
+func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, offset: Vector2) -> PackedVector2Array:
 	var angle: float = deg_to_rad(_central_angle(magnitudes.size()))
 	var angle_offset: float = deg_to_rad(-90);
 	var pentagon_coords: PackedVector2Array = []
@@ -44,7 +45,7 @@ func _pentagon_coords_from_magnitudes(magnitudes: Array[float], scale: float, of
 static func _polar_to_cartesian(angle: float, radius: float) -> Vector2:
 	return Vector2(cos(angle) * radius, sin(angle) * radius)
 
-func generate_radar_chart():
+func generate_radar_chart() -> void:
 	var max_pentagon_data = FlavorData.new();
 	max_pentagon_data.sweet = FlavorData.MAX_FLAVOR
 	max_pentagon_data.sour = FlavorData.MAX_FLAVOR
@@ -78,6 +79,9 @@ func generate_radar_chart():
 	fourth_pentagon_data.umami = FlavorData.MAX_FLAVOR * 3 / 4
 	_generate_flavor_pentagon(fourth_pentagon_data, 1)
 	
+func generate_spice_report(flavor_data: FlavorData) -> void:
+	
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

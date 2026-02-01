@@ -7,17 +7,15 @@ class_name FlavorReport
 @export
 var _ingredients : Array[Ingredient]
 @export
-var _base_soup_flavor_data : FlavorData
+var base_soup_flavor_data : FlavorData
 @export
 var _poison_flavor_data : FlavorData
 @export
 var _ingredients_flavor_data : FlavorData
 
-var _is_play: bool
-
-func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorData, poision_flavor_data: FlavorData, is_play: bool) -> void:
+func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data_init: FlavorData, poision_flavor_data: FlavorData, is_play: bool) -> void:
 	_ingredients = ingredients
-	_base_soup_flavor_data = base_Soup_flavor_data
+	base_soup_flavor_data = base_Soup_flavor_data_init
 	_poison_flavor_data = poision_flavor_data
 	_is_play = is_play
 	if (is_play):
@@ -166,14 +164,14 @@ func _populate_ingredient_flavor_data():
 	#_ingredients_flavor_data.acidity /= _ingredients.size()
 
 func _combine_flavor_data():
-	$CenterContainer/FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour
-	$CenterContainer/FlavorData.sweet = _ingredients_flavor_data.sweet + _base_soup_flavor_data.sweet + _poison_flavor_data.sweet
-	$CenterContainer/FlavorData.salty = _ingredients_flavor_data.salty + _base_soup_flavor_data.salty + _poison_flavor_data.salty
-	$CenterContainer/FlavorData.bitter = _ingredients_flavor_data.bitter + _base_soup_flavor_data.bitter + _poison_flavor_data.bitter
-	$CenterContainer/FlavorData.umami = _ingredients_flavor_data.umami + _base_soup_flavor_data.umami + _poison_flavor_data.umami
-	$CenterContainer/FlavorData.numbing_spice = _ingredients_flavor_data.numbing_spice + _base_soup_flavor_data.numbing_spice + _poison_flavor_data.numbing_spice
-	$CenterContainer/FlavorData.hot_spice = _ingredients_flavor_data.hot_spice + _base_soup_flavor_data.hot_spice + _poison_flavor_data.hot_spice
-	$CenterContainer/FlavorData.nasal_spice = _ingredients_flavor_data.nasal_spice + _base_soup_flavor_data.nasal_spice + _poison_flavor_data.nasal_spice
-	$CenterContainer/FlavorData.richness = _ingredients_flavor_data.richness + _base_soup_flavor_data.richness + _poison_flavor_data.richness
-	$CenterContainer/FlavorData.acidity = _ingredients_flavor_data.acidity + _base_soup_flavor_data.acidity + _poison_flavor_data.acidity
+	$CenterContainer/FlavorData.sour = _ingredients_flavor_data.sour + base_soup_flavor_data.sour + _poison_flavor_data.sour
+	$CenterContainer/FlavorData.sweet = _ingredients_flavor_data.sweet + base_soup_flavor_data.sweet + _poison_flavor_data.sweet
+	$CenterContainer/FlavorData.salty = _ingredients_flavor_data.salty + base_soup_flavor_data.salty + _poison_flavor_data.salty
+	$CenterContainer/FlavorData.bitter = _ingredients_flavor_data.bitter + base_soup_flavor_data.bitter + _poison_flavor_data.bitter
+	$CenterContainer/FlavorData.umami = _ingredients_flavor_data.umami + base_soup_flavor_data.umami + _poison_flavor_data.umami
+	$CenterContainer/FlavorData.numbing_spice = _ingredients_flavor_data.numbing_spice + base_soup_flavor_data.numbing_spice + _poison_flavor_data.numbing_spice
+	$CenterContainer/FlavorData.hot_spice = _ingredients_flavor_data.hot_spice + base_soup_flavor_data.hot_spice + _poison_flavor_data.hot_spice
+	$CenterContainer/FlavorData.nasal_spice = _ingredients_flavor_data.nasal_spice + base_soup_flavor_data.nasal_spice + _poison_flavor_data.nasal_spice
+	$CenterContainer/FlavorData.richness = _ingredients_flavor_data.richness + base_soup_flavor_data.richness + _poison_flavor_data.richness
+	$CenterContainer/FlavorData.acidity = _ingredients_flavor_data.acidity + base_soup_flavor_data.acidity + _poison_flavor_data.acidity
 	

@@ -1,28 +1,29 @@
 extends Node
 
 class_name FlavorData
+var rng = RandomNumberGenerator.new()
 
 static var MAX_FLAVOR = 10
 
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var sweet: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var sour: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var salty: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var bitter: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var umami: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var numbing_spice: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var hot_spice: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var nasal_spice: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var richness: float = 0
-@export_range(0, 10, 0.1, "0 - 10")
+@export_range(-10, 10, 0.1, "0 - 10")
 var acidity: float = 0
 
 func _flavor_as_array() -> Array[float]:
@@ -64,4 +65,12 @@ func rich_acid_equal_with_tolerance(other: FlavorData, tolerances: FlavorData) -
 		other._rich_acid_as_array(), \
 		tolerances._rich_acid_as_array())
 		
-	
+func generate_values():
+	sour = rng.randf_range(-10, 10)
+	sweet = rng.randf_range(-10, 10)
+	salty = rng.randf_range(-10, 10)
+	bitter = rng.randf_range(-10, 10)
+	umami = rng.randf_range(-10, 10)
+	numbing_spice = rng.randf_range(-10, 10)
+	hot_spice = rng.randf_range(-10, 10)
+	nasal_spice = rng.randf_range(-10, 10)

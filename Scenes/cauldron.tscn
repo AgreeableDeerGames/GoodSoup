@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b0nsdoxwr04u3"]
+
+[ext_resource type="Script" uid="uid://2dvfjjpt8nfh" path="res://Scripts/cauldron.gd" id="1_2rulr"]
+[ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="1_5qdwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ljf"]
+size = Vector2(259, 166)
+
+[node name="Cauldron" type="Area2D" unique_id=436779248]
+script = ExtResource("1_2rulr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=470096068]
+position = Vector2(119.5, 73)
+shape = SubResource("RectangleShape2D_q3ljf")
+
+[node name="Soup" type="Node" parent="." unique_id=1401205555]
+script = ExtResource("1_5qdwy")
+metadata/_custom_type_script = "uid://mv8g3k23j761"
+
+[node name="Ingredients" type="Node" parent="." unique_id=2142416744]

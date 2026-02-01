@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cligny2xyq5jl" path="res://Scripts/flavor_report.gd" id="1_vji58"]
 [ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="3_gq7h2"]
 [ext_resource type="StyleBox" uid="uid://c1ffhuf2eiper" path="res://Assets/checkbox.tres" id="4_gq7h2"]
+[ext_resource type="PackedScene" uid="uid://bsdpsjkul0byw" path="res://Scenes/back_button.tscn" id="5_3ji88"]
 
 [node name="FlavorReport" type="Node2D" unique_id=522384576]
 script = ExtResource("1_vji58")
@@ -244,3 +245,6 @@ offset_left = 60.0
 offset_right = 90.0
 offset_bottom = 30.0
 theme_override_styles/panel = ExtResource("4_gq7h2")
+
+[node name="BackButton" parent="." unique_id=638048668 instance=ExtResource("5_3ji88")]
+position = Vector2(941, 620)

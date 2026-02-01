@@ -34,11 +34,11 @@ func _central_angle (side_count: int) -> int:
 func _generate_flavor_pentagon(flavor_data: FlavorData, line_width: int):
 	# Create the Coordinates for the "pentagon"
 	var flavor_pentagon_coords: PackedVector2Array = _pentagon_coords_from_magnitudes(\
-		[flavor_data.sweet, \
-		flavor_data.sour, \
-		flavor_data.salty, \
-		flavor_data.bitter, \
-		flavor_data.umami], \
+		[clampf(flavor_data.sweet, 0, 10), \
+		clampf(flavor_data.sour, 0, 10), \
+		clampf(flavor_data.salty, 0, 10), \
+		clampf(flavor_data.bitter, 0, 10), \
+		clampf(flavor_data.umami, 0, 10)], \
 		10,
 		$CenterContainer.get_node("Sprite2D").position)
 	

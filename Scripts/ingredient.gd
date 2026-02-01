@@ -4,6 +4,7 @@ class_name Ingredient
 
 @export
 var ingredient_name : String
+@onready var flavor_data: FlavorData = $FlavorData
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

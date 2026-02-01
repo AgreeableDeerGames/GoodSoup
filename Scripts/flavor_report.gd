@@ -4,18 +4,23 @@ class_name FlavorReport
 @onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
 
 @export
-var ingredientTextures : Array[Texture2D]
-@export
 var _ingredients : Array[Ingredient]
+@export
+var _base_soup_flavor_data : FlavorData
+@export
+var _poison_flavor_data : FlavorData
+@export
+var _ingredients_flavor_data : FlavorData
 
-func setup_scene(ingredients : Array[Ingredient]) -> void:
+func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorData, poision_flavor_data: FlavorData) -> void:
 	_ingredients = ingredients
+	_base_soup_flavor_data = base_Soup_flavor_data
+	_poison_flavor_data = poision_flavor_data
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# First Generate the data from the ingredients
 	_populate_flavor_data()
-	_populate_ingredient_sprites()
 	# Create UI
 	generate_radar_chart()
 	_generate_flavor_pentagon($FlavorData, 10)
@@ -98,7 +103,8 @@ func _process(delta: float) -> void:
 	pass
 	
 func _generate_ingredients():
-	for ingredientTexture in ingredientTextures:
+	for ingredient in _ingredients:
+		var ingredientTexture = ingredient.get_node("Sprite2D").texture
 		var textureRect : TextureRect = TextureRect.new()
 		textureRect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		textureRect.texture = ingredientTexture
@@ -107,33 +113,45 @@ func _generate_ingredients():
 		ingredients_ui.add_child(textureRect)
 
 func _populate_flavor_data():
+	_populate_ingredient_flavor_data()
+	_combine_flavor_data()
+	
+func _populate_ingredient_flavor_data():
+	_ingredients_flavor_data = FlavorData.new()
 	for ingredient in _ingredients:
-		$FlavorData.sour += ingredient.get_node("FlavorData").sour
-		$FlavorData.sweet += ingredient.get_node("FlavorData").sweet
-		$FlavorData.salty += ingredient.get_node("FlavorData").salty
-		$FlavorData.bitter += ingredient.get_node("FlavorData").bitter
-		
+		_ingredients_flavor_data.sour += ingredient.get_node("FlavorData").sour
+		_ingredients_flavor_data.sweet += ingredient.get_node("FlavorData").sweet
+		_ingredients_flavor_data.salty += ingredient.get_node("FlavorData").salty
+		_ingredients_flavor_data.bitter += ingredient.get_node("FlavorData").bitter
 		# For some reason it does not like unami
-		#$FlavorData.umami += ingredient.get_node("FlavorData").unami
-		$FlavorData.numbing_spice += ingredient.get_node("FlavorData").numbing_spice
-		$FlavorData.hot_spice += ingredient.get_node("FlavorData").hot_spice
-		$FlavorData.nasal_spice += ingredient.get_node("FlavorData").nasal_spice
+		#_ingredients_flavor_data.umami += ingredient.get_node("FlavorData").unami
+		_ingredients_flavor_data.numbing_spice += ingredient.get_node("FlavorData").numbing_spice
+		_ingredients_flavor_data.hot_spice += ingredient.get_node("FlavorData").hot_spice
+		_ingredients_flavor_data.nasal_spice += ingredient.get_node("FlavorData").nasal_spice
 		#$FlavorData.richness += ingredient.get_node("FlavorData").richness
 		#$FlavorData.acidity += ingredient.get_node("FlavorData").acidity
-		
-	$FlavorData.sour /= _ingredients.size()
-	$FlavorData.sweet /= _ingredients.size()
-	$FlavorData.salty /= _ingredients.size()
-	$FlavorData.bitter /= _ingredients.size()
-	#$FlavorData.umami /= _ingredients.size()
-	$FlavorData.numbing_spice /= _ingredients.size()
-	$FlavorData.hot_spice /= _ingredients.size()
-	$FlavorData.nasal_spice /= _ingredients.size()
-	#$FlavorData.richness /= _ingredients.size()
-	#$FlavorData.acidity /= _ingredients.size()
-	pass
+	
+	# Get the average
+	_ingredients_flavor_data.sour /= _ingredients.size()
+	_ingredients_flavor_data.sweet /= _ingredients.size()
+	_ingredients_flavor_data.salty /= _ingredients.size()
+	_ingredients_flavor_data.bitter /= _ingredients.size()
+	#_ingredients_flavor_data.umami /= _ingredients.size()
+	_ingredients_flavor_data.numbing_spice /= _ingredients.size()
+	_ingredients_flavor_data.hot_spice /= _ingredients.size()
+	_ingredients_flavor_data.nasal_spice /= _ingredients.size()
+	#_ingredients_flavor_data.richness /= _ingredients.size()
+	#_ingredients_flavor_data.acidity /= _ingredients.size()
 
-func _populate_ingredient_sprites():
-	for ingredient in _ingredients:
-		self.ingredientTextures.append(ingredient.get_node("Sprite2D").texture)
-	pass
+func _combine_flavor_data():
+	$FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour
+	$FlavorData.sweet = _ingredients_flavor_data.sweet + _base_soup_flavor_data.sweet + _poison_flavor_data.sweet
+	$FlavorData.salty = _ingredients_flavor_data.salty + _base_soup_flavor_data.salty + _poison_flavor_data.salty
+	$FlavorData.bitter = _ingredients_flavor_data.bitter + _base_soup_flavor_data.bitter + _poison_flavor_data.bitter
+	#$FlavorData.umami = _ingredients_flavor_data.umami + _base_soup_flavor_data.umami + _poison_flavor_data.umami
+	$FlavorData.numbing_spice = _ingredients_flavor_data.numbing_spice + _base_soup_flavor_data.numbing_spice + _poison_flavor_data.numbing_spice
+	$FlavorData.hot_spice = _ingredients_flavor_data.hot_spice + _base_soup_flavor_data.hot_spice + _poison_flavor_data.hot_spice
+	$FlavorData.nasal_spice = _ingredients_flavor_data.nasal_spice + _base_soup_flavor_data.nasal_spice + _poison_flavor_data.nasal_spice
+	#$FlavorData.richness = _ingredients_flavor_data.richness + _base_soup_flavor_data.richness + _poison_flavor_data.richness
+	#$FlavorData.acidity = _ingredients_flavor_data.acidity + _base_soup_flavor_data.acidity + _poison_flavor_data.acidity
+	

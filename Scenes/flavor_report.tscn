@@ -12,16 +12,8 @@ position = Vector2(641.5, 360.5)
 scale = Vector2(0.66614574, 0.6675926)
 texture = ExtResource("1_b5ke7")
 
-[node name="FlavorData" type="Node" parent="." unique_id=1000443721]
+[node name="FlavorData" type="Node" parent="." unique_id=1055033563]
 script = ExtResource("3_gq7h2")
-sweet = 6.7
-sour = 4.0
-salty = 4.0
-bitter = 6.5
-umami = 3.4
-numbing_spice = 7.0
-hot_spice = 4.0
-nasal_spice = 10.0
 metadata/_custom_type_script = "uid://mv8g3k23j761"
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1474076038]

@@ -13,8 +13,10 @@ func _on_pressed() -> void:
 	ingredient.get_node("FlavorData").nasal_spice = 1
 	
 	var ingredients : Array[Ingredient] = [ingredient]
+	var soup = get_parent().get_node("Soup")
+	var poison = get_parent().get_node("Poison")
 	
 	# The ingredients gets captured. Call this on the newly instatiated scene
-	var setup_fn = func (x : FlavorReport): x.setup_scene(ingredients)
+	var setup_fn = func (x : FlavorReport): x.setup_scene(ingredients, soup, poison)
 	
 	Signals.emit_signal("load_new_scene", "res://Scenes/flavor_report.tscn", false, setup_fn)

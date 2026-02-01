@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://buxye611a8taw"]
 
 [ext_resource type="Script" uid="uid://buyjbhsru4ya7" path="res://Scripts/view_recipe.gd" id="1_3dogw"]
+[ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="2_r5l72"]
 
 [node name="TestScene" type="Node2D" unique_id=1373839554]
 
@@ -10,5 +11,20 @@ offset_top = 199.0
 offset_right = 794.0
 offset_bottom = 520.0
 script = ExtResource("1_3dogw")
+
+[node name="Poison" type="Node" parent="." unique_id=1050952215]
+script = ExtResource("2_r5l72")
+sweet = 6.7
+salty = 3.7
+numbing_spice = 7.8
+metadata/_custom_type_script = "uid://mv8g3k23j761"
+
+[node name="Soup" type="Node" parent="." unique_id=1258269443]
+script = ExtResource("2_r5l72")
+salty = 3.1
+umami = 5.0
+numbing_spice = 6.0
+hot_spice = 8.0
+metadata/_custom_type_script = "uid://mv8g3k23j761"
 
 [connection signal="pressed" from="viewRecipe" to="viewRecipe" method="_on_pressed"]

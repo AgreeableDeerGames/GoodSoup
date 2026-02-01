@@ -86,3 +86,13 @@ func generate_values():
 	numbing_spice = rng.randf_range(-10, 10)
 	hot_spice = rng.randf_range(-10, 10)
 	nasal_spice = rng.randf_range(-10, 10)
+	
+func generate_pos_values():
+	sour = rng.randf_range(0, 10)
+	sweet = rng.randf_range(0, 10)
+	salty = rng.randf_range(0, 10)
+	bitter = rng.randf_range(0, 10)
+	umami = rng.randf_range(0, 10)
+	numbing_spice = rng.randf_range(0, 10)
+	hot_spice = rng.randf_range(0, 10)
+	nasal_spice = rng.randf_range(0, 10)

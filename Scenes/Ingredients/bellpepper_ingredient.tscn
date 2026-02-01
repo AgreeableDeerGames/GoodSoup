@@ -12,5 +12,10 @@ texture = ExtResource("2_0qeu7")
 scale = Vector2(0.4, 0.4)
 clickable_area = Rect2(-50, -100, 140, 200)
 
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = 2.9000000000000004
+sour = 0.8000000000000007
+acidity = 3.0
+
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
 position = Vector2(8.5, 3.5)

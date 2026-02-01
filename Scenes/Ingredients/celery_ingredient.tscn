@@ -10,3 +10,6 @@ texture = ExtResource("2_sgigu")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 scale = Vector2(0.3, 0.3)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = 0.5

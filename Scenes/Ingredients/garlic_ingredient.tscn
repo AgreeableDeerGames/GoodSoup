@@ -10,3 +10,8 @@ texture = ExtResource("2_ep77b")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-100, -100, 100, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+salty = -0.1999999999999993
+bitter = 3.3000000000000007
+umami = 2.3000000000000007

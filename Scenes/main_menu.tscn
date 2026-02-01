@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b7pbkcsvbjrkj"]
 
+[ext_resource type="Script" uid="uid://dsx2klqrdiaci" path="res://Scripts/play_button.gd" id="1_1ehe0"]
 [ext_resource type="Script" uid="uid://bs7237sxhjhwr" path="res://Scripts/exit_button.gd" id="1_28flt"]
 [ext_resource type="Script" uid="uid://cineitkootgc4" path="res://Scripts/instructions_button.gd" id="1_48xlc"]
 
@@ -52,6 +53,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Play Game"
 alignment = 0
+script = ExtResource("1_1ehe0")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2" unique_id=36799734]
 layout_mode = 2
@@ -73,4 +75,5 @@ text = "Exit to Desktop"
 alignment = 0
 script = ExtResource("1_28flt")
 
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/PlayButton" to="VBoxContainer2/HBoxContainer/PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer3/InstructionsButton" to="VBoxContainer2/HBoxContainer3/InstructionsButton" method="_on_pressed"]

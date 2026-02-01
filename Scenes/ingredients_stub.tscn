@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dkveuyrkmcpyn"]
-
-[ext_resource type="Script" uid="uid://6rosqnvmp5d5" path="res://Scripts/ingredients_stub.gd" id="1_bfhg6"]
-
-[node name="InstructionsStub" type="Node" unique_id=1567521647]
-script = ExtResource("1_bfhg6")

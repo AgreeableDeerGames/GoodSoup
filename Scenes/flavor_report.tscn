@@ -87,3 +87,16 @@ offset_right = 193.0
 offset_bottom = 108.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Savory"
+
+[node name="IngredientsUI" type="GridContainer" parent="CanvasGroup" unique_id=183785629]
+custom_minimum_size = Vector2(50, 50)
+offset_top = 22.0
+offset_right = 479.0
+offset_bottom = 132.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../IngredientsLabel")
+focus_neighbor_bottom = NodePath("../TasteLabel")
+theme_override_constants/h_separation = -5
+theme_override_constants/v_separation = -5
+columns = 7

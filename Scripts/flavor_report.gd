@@ -1,11 +1,25 @@
 extends Node2D
 
+class_name FlavorReport
+@onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
+
+@export
+var ingredientTextures : Array[Texture2D]
+@export
+var _ingredients : Array[Ingredient]
+
+func setup_scene(ingredients : Array[Ingredient]) -> void:
+	_ingredients = ingredients
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# First Generate the data from the ingredients
+	_populate_flavor_data()
+	_populate_ingredient_sprites()
+	# Create UI
 	generate_radar_chart()
 	_generate_flavor_pentagon($FlavorData, 10)
-	
+	_generate_ingredients()
 
 func _central_angle (side_count: int) -> int:
 	return 360 / side_count
@@ -81,4 +95,45 @@ func generate_radar_chart():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+	
+func _generate_ingredients():
+	for ingredientTexture in ingredientTextures:
+		var textureRect : TextureRect = TextureRect.new()
+		textureRect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		textureRect.texture = ingredientTexture
+		textureRect.custom_minimum_size.x = ingredients_ui.custom_minimum_size.x
+		textureRect.custom_minimum_size.y = ingredients_ui.custom_minimum_size.y
+		ingredients_ui.add_child(textureRect)
+
+func _populate_flavor_data():
+	for ingredient in _ingredients:
+		$FlavorData.sour += ingredient.get_node("FlavorData").sour
+		$FlavorData.sweet += ingredient.get_node("FlavorData").sweet
+		$FlavorData.salty += ingredient.get_node("FlavorData").salty
+		$FlavorData.bitter += ingredient.get_node("FlavorData").bitter
+		
+		# For some reason it does not like unami
+		#$FlavorData.umami += ingredient.get_node("FlavorData").unami
+		$FlavorData.numbing_spice += ingredient.get_node("FlavorData").numbing_spice
+		$FlavorData.hot_spice += ingredient.get_node("FlavorData").hot_spice
+		$FlavorData.nasal_spice += ingredient.get_node("FlavorData").nasal_spice
+		#$FlavorData.richness += ingredient.get_node("FlavorData").richness
+		#$FlavorData.acidity += ingredient.get_node("FlavorData").acidity
+		
+	$FlavorData.sour /= _ingredients.size()
+	$FlavorData.sweet /= _ingredients.size()
+	$FlavorData.salty /= _ingredients.size()
+	$FlavorData.bitter /= _ingredients.size()
+	#$FlavorData.umami /= _ingredients.size()
+	$FlavorData.numbing_spice /= _ingredients.size()
+	$FlavorData.hot_spice /= _ingredients.size()
+	$FlavorData.nasal_spice /= _ingredients.size()
+	#$FlavorData.richness /= _ingredients.size()
+	#$FlavorData.acidity /= _ingredients.size()
+	pass
+
+func _populate_ingredient_sprites():
+	for ingredient in _ingredients:
+		self.ingredientTextures.append(ingredient.get_node("Sprite2D").texture)
 	pass

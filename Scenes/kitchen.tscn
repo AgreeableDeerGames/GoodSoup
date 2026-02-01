@@ -111,7 +111,7 @@ position = Vector2(50, 518)
 [node name="OkraIngredient" parent="." unique_id=191676113 instance=ExtResource("24_1i8y3")]
 position = Vector2(181, 357)
 
-[node name="Ingredient2" parent="." unique_id=2025259183 instance=ExtResource("25_hqj0s")]
+[node name="sugar_ingredient" parent="." unique_id=2025259183 instance=ExtResource("25_hqj0s")]
 position = Vector2(281, 366)
 
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]

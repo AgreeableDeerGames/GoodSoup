@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
+[ext_resource type="Texture2D" uid="uid://bjik7p4yl2mg2" path="res://Assets/CastleBackground.jpg" id="1_4clir"]
 [ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 [ext_resource type="PackedScene" uid="uid://bu6os5jiu4cmv" path="res://Scenes/live_tasters.tscn" id="1_kr0tx"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
@@ -12,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://b33juydpufhes" path="res://Scenes/dead_tasters.tscn" id="10_2cl3g"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1529682758]
+position = Vector2(615, 196)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4clir")
 
 [node name="LiveTasters" parent="." unique_id=1101176070 instance=ExtResource("1_kr0tx")]
 position = Vector2(570, 363)

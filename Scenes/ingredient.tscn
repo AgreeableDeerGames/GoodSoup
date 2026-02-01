@@ -12,3 +12,5 @@ texture = ExtResource("1_pc44i")
 metadata/_edit_group_ = true
 
 [node name="DragAndDrop" parent="." unique_id=1088639070 instance=ExtResource("1_2hfw8")]
+position = Vector2(-1, 1)
+clickable_area = Rect2(-50, -100, 100, 200)

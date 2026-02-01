@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_mouse_entered() -> void:
-	print("I've been entered")
 	get_parent().is_draggable = true
 
 

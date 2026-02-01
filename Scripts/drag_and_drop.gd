@@ -1,4 +1,8 @@
+@tool
 extends Node2D
+
+@export
+var clickable_area: Rect2
 
 var is_draggable: bool = false
 var is_in_drag: bool = false
@@ -7,10 +11,12 @@ var is_being_dropped: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#get_parent().
-	pass # Replace with function body.
+	$Control.size = clickable_area.size
+	$Control.position = clickable_area.position
 
 func set_size(new_size: Vector2) -> void:
-	$Control.size = new_size
+	#Control.size = new_size
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,3 +38,7 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and !event.pressed and is_draggable:
 			is_in_drag = false;
 			is_being_dropped = true;
+			
+func _draw():
+	if Engine.is_editor_hint():
+		draw_rect(clickable_area, Color.RED, false, 5)

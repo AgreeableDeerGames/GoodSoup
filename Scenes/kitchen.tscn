@@ -60,4 +60,11 @@ texture_focused = ExtResource("11_ykbxl")
 script = ExtResource("12_32235")
 metadata/_edit_lock_ = true
 
+[node name="FlavorReports" type="HBoxContainer" parent="." unique_id=1004301189]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 381.0
+offset_top = 494.0
+offset_right = 831.0
+offset_bottom = 550.0
+
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]

@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 [ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
-[ext_resource type="PackedScene" uid="uid://yu8sgabt5i6b" path="res://Scenes/Ingredients/OnionIngredient.tscn" id="3_lvc4q"]
-[ext_resource type="PackedScene" uid="uid://d0dgtosn5vwj2" path="res://Scenes/Ingredients/MushroomIngredient.tscn" id="4_6pjjr"]
-[ext_resource type="PackedScene" uid="uid://dhsy0idrghskg" path="res://Scenes/Ingredients/Saltingredient.tscn" id="5_pb1w8"]
-[ext_resource type="PackedScene" uid="uid://bxk8arec4q5tm" path="res://Scenes/Ingredients/Tomatoingredient.tscn" id="6_jbuf1"]
-[ext_resource type="PackedScene" uid="uid://de7ic6emvr2g3" path="res://Scenes/Ingredients/BellPepperingredient.tscn" id="7_cetdd"]
-[ext_resource type="PackedScene" uid="uid://duiy28atr6a67" path="res://Scenes/Ingredients/CarrotIngredient.tscn" id="8_o8uib"]
+[ext_resource type="PackedScene" uid="uid://yu8sgabt5i6b" path="res://Scenes/Ingredients/onion_ingredient.tscn" id="3_lvc4q"]
+[ext_resource type="PackedScene" uid="uid://d0dgtosn5vwj2" path="res://Scenes/Ingredients/mushroom_ingredient.tscn" id="4_6pjjr"]
+[ext_resource type="PackedScene" uid="uid://dhsy0idrghskg" path="res://Scenes/Ingredients/salt_ingredient.tscn" id="5_pb1w8"]
+[ext_resource type="PackedScene" uid="uid://bxk8arec4q5tm" path="res://Scenes/Ingredients/tomato_ingredient.tscn" id="6_jbuf1"]
+[ext_resource type="PackedScene" uid="uid://de7ic6emvr2g3" path="res://Scenes/Ingredients/bellpepper_ingredient.tscn" id="7_cetdd"]
+[ext_resource type="PackedScene" uid="uid://duiy28atr6a67" path="res://Scenes/Ingredients/carrot_ingredient.tscn" id="8_o8uib"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 

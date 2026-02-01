@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cn6152a1sbpa0"]
+[gd_scene format=3 uid="uid://fji6y2b4ganf"]
 
-[ext_resource type="PackedScene" uid="uid://b8tqr6q1uewsc" path="res://Scenes/drag_and_drop.tscn" id="1_2hfw8"]
+[ext_resource type="PackedScene" uid="uid://lj1xgxskhdh4" path="res://Scenes/drag_and_drop.tscn" id="1_2hfw8"]
 [ext_resource type="Texture2D" uid="uid://ej3pimfbdfit" path="res://Assets/PoisonBottle.png" id="1_pc44i"]
 [ext_resource type="Script" uid="uid://ck16ymroqhny3" path="res://Scripts/ingredient.gd" id="1_vp2j4"]
 
@@ -12,4 +12,3 @@ texture = ExtResource("1_pc44i")
 metadata/_edit_group_ = true
 
 [node name="DragAndDrop" parent="." unique_id=1088639070 instance=ExtResource("1_2hfw8")]
-script = null

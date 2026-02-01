@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://b8tqr6q1uewsc"]
+[gd_scene format=3 uid="uid://lj1xgxskhdh4"]
 
-[ext_resource type="Script" path="res://Scripts/drag_and_drop.gd" id="1_6awkg"]
-[ext_resource type="Script" path="res://Scripts/drag_and_drop_control.gd" id="1_cu6td"]
+[ext_resource type="Script" uid="uid://bqrn0of0etdb5" path="res://Scripts/drag_and_drop.gd" id="1_cu6td"]
+[ext_resource type="Script" uid="uid://bid0132bahx4a" path="res://Scripts/drag_and_drop_control.gd" id="2_6awkg"]
 
 [node name="DragAndDrop" type="Node2D" unique_id=1088639070]
-script = ExtResource("1_6awkg")
+script = ExtResource("1_cu6td")
 metadata/_edit_group_ = true
 
 [node name="Control" type="Control" parent="." unique_id=1712095405]
@@ -12,7 +12,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 26.0
 offset_bottom = 32.0
-script = ExtResource("1_cu6td")
+script = ExtResource("2_6awkg")
 
 [connection signal="mouse_entered" from="Control" to="Control" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control" to="Control" method="_on_mouse_exited"]

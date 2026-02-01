@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cfu84dsoj6clf"]
+[gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
-[ext_resource type="PackedScene" uid="uid://dmv18ddewhefb" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 

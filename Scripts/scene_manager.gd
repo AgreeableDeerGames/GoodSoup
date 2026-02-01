@@ -49,7 +49,7 @@ func _on_back_to_previous_scene() -> void:
 	await transition_scene.get_node("AnimationPlayer").animation_finished
 
 
-func _on_load_new_scene(scene_name: String, resetTree: bool) -> void:
+func _on_load_new_scene(scene_name: String, resetTree: bool, init_fn : Variant = null) -> void:
 	transition_scene.get_node("AnimationPlayer").play("fade_to_black")
 	await transition_scene.get_node("AnimationPlayer").animation_finished
 	
@@ -61,6 +61,11 @@ func _on_load_new_scene(scene_name: String, resetTree: bool) -> void:
 		scenes.get_child(-1).visible = false
 		
 	var scene = load(scene_name).instantiate()
+
+	# only allow lambdas or callables, then call it on the newly created scene
+	if typeof(init_fn) == TYPE_CALLABLE:
+		init_fn.call(scene)
+	
 	scenes.add_child(scene)
 	transition_scene.get_node("AnimationPlayer").play("fade_to_clear")
 	await transition_scene.get_node("AnimationPlayer").animation_finished

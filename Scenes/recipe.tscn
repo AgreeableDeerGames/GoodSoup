@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d8pt0p2rqgp7"]
+
+[ext_resource type="Script" uid="uid://crlffs440txkd" path="res://Scripts/recipe.gd" id="1_cankl"]
+[ext_resource type="PackedScene" uid="uid://dkveuyrkmcpyn" path="res://Scenes/ingredients_stub.tscn" id="1_ie2vq"]
+
+[node name="Recipe" type="Node2D" unique_id=475289182]
+script = ExtResource("1_cankl")
+
+[node name="FlavorData" type="Node" parent="." unique_id=1544268374]
+
+[node name="InstructionsStub" parent="." unique_id=1567521647 instance=ExtResource("1_ie2vq")]

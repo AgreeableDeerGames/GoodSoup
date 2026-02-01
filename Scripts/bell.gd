@@ -21,7 +21,7 @@ func _on_pressed() -> void:
 	var poison : FlavorData = get_parent().poison
 	
 
-	if get_parent().get_node("LiveTasters").tasters.size() > 4:
+	if get_parent().get_node("LiveTasters").tasters.size() > 0:
 		# Create report to click
 		create_flavor_report(soup, poison, ingredients)
 

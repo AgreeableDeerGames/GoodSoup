@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8euvl743lxis"]
 
-[ext_resource type="Script" uid="uid://b7nuy6b2gne8q" path="res://Scenes/drag_and_drop_control.gd" id="1_cu6td"]
+[ext_resource type="Script" uid="uid://b7nuy6b2gne8q" path="res://Scripts/drag_and_drop_control.gd" id="1_cu6td"]
 
 [node name="DragAndDrop" type="Node2D" unique_id=1088639070]
 metadata/_edit_group_ = true
@@ -8,8 +8,8 @@ metadata/_edit_group_ = true
 [node name="Control" type="Control" parent="." unique_id=1712095405]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 26.0
+offset_bottom = 32.0
 script = ExtResource("1_cu6td")
 
 [connection signal="mouse_entered" from="Control" to="Control" method="_on_mouse_entered"]

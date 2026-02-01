@@ -2,9 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://b8euvl743lxis" path="res://Scenes/drag_and_drop.tscn" id="1_2hfw8"]
 [ext_resource type="Texture2D" uid="uid://ej3pimfbdfit" path="res://Assets/PoisonBottle.png" id="1_pc44i"]
+[ext_resource type="Script" uid="uid://ck16ymroqhny3" path="res://Scripts/ingredient.gd" id="1_vp2j4"]
 [ext_resource type="Script" uid="uid://bqrn0of0etdb5" path="res://Scripts/drag_and_drop.gd" id="2_70mii"]
 
 [node name="Ingredient" type="Node2D" unique_id=30938857]
+script = ExtResource("1_vp2j4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1785830097]
 texture = ExtResource("1_pc44i")

@@ -9,6 +9,8 @@ func _ready() -> void:
 	#get_parent().
 	pass # Replace with function body.
 
+func set_size(new_size: Vector2) -> void:
+	$Control.size = new_size
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,8 +18,9 @@ func _process(delta: float) -> void:
 	if is_in_drag:
 		#move to mouse position
 		get_parent().position = get_viewport().get_mouse_position();
-	if (is_being_dropped)
+	if (is_being_dropped):
 		# determine if it can go into cauldron, else send it back to the start (or just delete whatever)
+		pass
 	pass
 
 func _input(event: InputEvent) -> void:

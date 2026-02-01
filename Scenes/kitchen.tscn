@@ -5,5 +5,4 @@
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 
 [node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
-visible = false
 position = Vector2(699, 519)

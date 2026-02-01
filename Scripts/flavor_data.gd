@@ -20,12 +20,19 @@ var numbing_spice: float = 0
 var hot_spice: float = 0
 @export_range(0, 10, 0.1, "0 - 10")
 var nasal_spice: float = 0
+@export_range(0, 10, 0.1, "0 - 10")
+var richness: float = 0
+@export_range(0, 10, 0.1, "0 - 10")
+var acidity: float = 0
 
 func _flavor_as_array() -> Array[float]:
 	return [sweet, sour, salty, bitter, umami]
 	
 func _spice_as_array() -> Array[float]:
 	return [numbing_spice, hot_spice, nasal_spice]
+	
+func _rich_acid_as_array() -> Array[float]:
+	return [richness, acidity]
 	
 static func _array_equal_with_tolerance(
 	first: Array[float], 
@@ -51,6 +58,10 @@ func spice_equal_with_tolerance(other: FlavorData, tolerances: FlavorData) -> bo
 		other._spice_as_array(), \
 		tolerances._spice_as_array())
 	
-		
+func rich_acid_equal_with_tolerance(other: FlavorData, tolerances: FlavorData) -> bool:
+	return _array_equal_with_tolerance(\
+		self._rich_acid_as_array(), \
+		other._rich_acid_as_array(), \
+		tolerances._rich_acid_as_array())
 		
 	

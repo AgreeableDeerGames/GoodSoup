@@ -1,8 +1,51 @@
 [gd_scene format=3 uid="uid://dfjbvv3jb4pbd"]
 
-[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+[ext_resource type="PackedScene" uid="uid://fji6y2b4ganf" path="res://Scenes/ingredient.tscn" id="1_7u47w"]
+[ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_23qos"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 
+[node name="KitchenBaseSprite" type="Sprite2D" parent="." unique_id=1609933474]
+position = Vector2(639.75, 360.25)
+scale = Vector2(0.6669271, 0.6606481)
+texture = ExtResource("2_23qos")
+
 [node name="Ingredient" parent="." unique_id=30938857 instance=ExtResource("1_7u47w")]
 position = Vector2(699, 519)
+
+[node name="ItemLocation1" type="Node2D" parent="." unique_id=1534312802]
+position = Vector2(62, 58)
+metadata/_edit_group_ = true
+
+[node name="ItemLocation2" type="Node2D" parent="." unique_id=950766105]
+position = Vector2(178, 70)
+
+[node name="ItemLocation3" type="Node2D" parent="." unique_id=705315070]
+position = Vector2(276, 63)
+
+[node name="ItemLocation4" type="Node2D" parent="." unique_id=607737948]
+position = Vector2(62, 144)
+
+[node name="ItemLocation5" type="Node2D" parent="." unique_id=1308477620]
+position = Vector2(175, 146)
+
+[node name="ItemLocation6" type="Node2D" parent="." unique_id=104447353]
+position = Vector2(271, 144)
+
+[node name="ItemLocation7" type="Node2D" parent="." unique_id=505705319]
+position = Vector2(69, 221)
+
+[node name="ItemLocation8" type="Node2D" parent="." unique_id=1566169136]
+position = Vector2(182, 221)
+
+[node name="ItemLocation9" type="Node2D" parent="." unique_id=412081889]
+position = Vector2(278, 216)
+
+[node name="ItemLocation10" type="Node2D" parent="." unique_id=1606460501]
+position = Vector2(70, 310)
+
+[node name="ItemLocation11" type="Node2D" parent="." unique_id=410508725]
+position = Vector2(183, 307)
+
+[node name="ItemLocation12" type="Node2D" parent="." unique_id=1482915025]
+position = Vector2(280, 304)

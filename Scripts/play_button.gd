@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	Signals.emit_signal("load_new_scene", "res://Scenes/test_scene.tscn", true)
+	Signals.emit_signal("load_new_scene", "res://Scenes/kitchen.tscn", true)

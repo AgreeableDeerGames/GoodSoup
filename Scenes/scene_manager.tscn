@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bcrv7qf0qcmcg"]
+
+[ext_resource type="Script" uid="uid://c5jsoaaprje7p" path="res://Scripts/scene_manager.gd" id="1_8bihv"]
+[ext_resource type="PackedScene" uid="uid://bdm60p0bqfmww" path="res://Scenes/transition_scene.tscn" id="1_mk1ro"]
+
+[node name="SceneManager" type="Node" unique_id=1030478623]
+script = ExtResource("1_8bihv")
+
+[node name="Scenes" type="Node" parent="." unique_id=193305103]
+
+[node name="TransitionScene" parent="." unique_id=360842814 instance=ExtResource("1_mk1ro")]

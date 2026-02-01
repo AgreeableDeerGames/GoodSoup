@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://b8euvl743lxis"]
+[gd_scene format=3 uid="uid://b8tqr6q1uewsc"]
 
-[ext_resource type="Script" uid="uid://b7nuy6b2gne8q" path="res://Scripts/drag_and_drop_control.gd" id="1_cu6td"]
+[ext_resource type="Script" path="res://Scripts/drag_and_drop.gd" id="1_6awkg"]
+[ext_resource type="Script" path="res://Scripts/drag_and_drop_control.gd" id="1_cu6td"]
 
 [node name="DragAndDrop" type="Node2D" unique_id=1088639070]
+script = ExtResource("1_6awkg")
 metadata/_edit_group_ = true
 
 [node name="Control" type="Control" parent="." unique_id=1712095405]

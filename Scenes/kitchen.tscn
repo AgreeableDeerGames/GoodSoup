@@ -15,6 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://cbeiup6aneh5" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
 [ext_resource type="Texture2D" uid="uid://72t7ohsy0kjv" path="res://Assets/Bell.png" id="11_ykbxl"]
 [ext_resource type="Script" uid="uid://ce3pwpyutpi88" path="res://Scripts/bell.gd" id="12_32235"]
+[ext_resource type="PackedScene" uid="uid://qqxycho4hxne" path="res://Scenes/Ingredients/celery_ingredient.tscn" id="16_2l700"]
+[ext_resource type="PackedScene" uid="uid://bi1w5fwy0yn53" path="res://Scenes/Ingredients/chillipeppers_ingredient.tscn" id="17_r0dk1"]
+[ext_resource type="PackedScene" uid="uid://l71n4orjcv2j" path="res://Scenes/Ingredients/cream_ingredient.tscn" id="18_i6vcq"]
+[ext_resource type="PackedScene" uid="uid://b6u1y61q1qkba" path="res://Scenes/Ingredients/garlic_ingredient.tscn" id="19_r0dk1"]
+[ext_resource type="PackedScene" uid="uid://bnej4487dgr4g" path="res://Scenes/Ingredients/ginger_ingredient.tscn" id="20_i6vcq"]
+[ext_resource type="PackedScene" uid="uid://cixw4h5kyxw1c" path="res://Scenes/Ingredients/horseradish_ingredient.tscn" id="21_m1yx5"]
+[ext_resource type="PackedScene" uid="uid://ca7uftblyptfd" path="res://Scenes/Ingredients/lemon_ingredient.tscn" id="22_hc3lq"]
+[ext_resource type="PackedScene" uid="uid://d0dp5kyg2sq13" path="res://Scenes/Ingredients/meat_ingredient.tscn" id="23_hc3lq"]
+[ext_resource type="PackedScene" uid="uid://2mj2l73iamkn" path="res://Scenes/Ingredients/okra_ingredient.tscn" id="24_1i8y3"]
+[ext_resource type="PackedScene" uid="uid://bqc7x0l3jn3lo" path="res://Scenes/Ingredients/sugarbag_ingredient.tscn" id="25_hqj0s"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 script = ExtResource("1_t5hpn")
@@ -73,5 +83,35 @@ texture_disabled = ExtResource("11_ykbxl")
 texture_focused = ExtResource("11_ykbxl")
 script = ExtResource("12_32235")
 metadata/_edit_lock_ = true
+
+[node name="CeleryIngredient" parent="." unique_id=630518003 instance=ExtResource("16_2l700")]
+position = Vector2(62, 198)
+
+[node name="ChilllipeppersIngredient" parent="." unique_id=814412202 instance=ExtResource("17_r0dk1")]
+position = Vector2(175, 198)
+
+[node name="CreamIngredient" parent="." unique_id=993141041 instance=ExtResource("18_i6vcq")]
+position = Vector2(277, 198)
+
+[node name="GarlicIngredient" parent="." unique_id=1493413822 instance=ExtResource("19_r0dk1")]
+position = Vector2(65, 288)
+
+[node name="GingerIngredient" parent="." unique_id=2018538187 instance=ExtResource("20_i6vcq")]
+position = Vector2(178, 281)
+
+[node name="HorseradishIngredient" parent="." unique_id=1261304595 instance=ExtResource("21_m1yx5")]
+position = Vector2(284, 282)
+
+[node name="LemonIngredient" parent="." unique_id=726663870 instance=ExtResource("22_hc3lq")]
+position = Vector2(58, 369)
+
+[node name="MeatIngredient" parent="." unique_id=2016154831 instance=ExtResource("23_hc3lq")]
+position = Vector2(50, 518)
+
+[node name="OkraIngredient" parent="." unique_id=191676113 instance=ExtResource("24_1i8y3")]
+position = Vector2(181, 357)
+
+[node name="Ingredient2" parent="." unique_id=2025259183 instance=ExtResource("25_hqj0s")]
+position = Vector2(281, 366)
 
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]

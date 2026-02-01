@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cixw4h5kyxw1c"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_whxi6"]
+[ext_resource type="Texture2D" uid="uid://5lci2snmdl1o" path="res://Assets/Horseradish.PNG" id="2_ymw3s"]
+
+[node name="Ingredient" unique_id=30938857 instance=ExtResource("1_whxi6")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_ymw3s")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-200, -100, 400, 200)

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnej4487dgr4g"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_mi7mu"]
+[ext_resource type="Texture2D" uid="uid://du0sfbt3qbwv4" path="res://Assets/Ginger.PNG" id="2_7phq6"]
+
+[node name="Ingredient" unique_id=30938857 instance=ExtResource("1_mi7mu")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_7phq6")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-200, -100, 400, 200)

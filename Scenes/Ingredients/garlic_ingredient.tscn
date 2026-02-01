@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b6u1y61q1qkba"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_dth64"]
+[ext_resource type="Texture2D" uid="uid://6b0osa1psscd" path="res://Assets/Garlic.PNG" id="2_ep77b"]
+
+[node name="Ingredient" unique_id=30938857 instance=ExtResource("1_dth64")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_ep77b")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-100, -100, 100, 200)

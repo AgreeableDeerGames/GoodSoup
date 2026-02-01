@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://2mj2l73iamkn"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_l2kiv"]
+[ext_resource type="Texture2D" uid="uid://sewbgk7octft" path="res://Assets/Okra.PNG" id="2_ov6v4"]
+
+[node name="Ingredient" unique_id=30938857 instance=ExtResource("1_l2kiv")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_ov6v4")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-200, -100, 400, 200)

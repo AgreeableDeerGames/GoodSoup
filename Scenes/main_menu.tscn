@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dsx2klqrdiaci" path="res://Scripts/play_button.gd" id="1_1ehe0"]
 [ext_resource type="Script" uid="uid://bs7237sxhjhwr" path="res://Scripts/exit_button.gd" id="1_28flt"]
 [ext_resource type="Script" uid="uid://cineitkootgc4" path="res://Scripts/instructions_button.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="4_ce3w2"]
 
 [node name="Main Menu" type="Control" unique_id=1096827752]
 layout_mode = 3
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
+
+[node name="KitchenBaseSprite" type="Sprite2D" parent="." unique_id=1410393804]
+position = Vector2(639.75, 360.25)
+scale = Vector2(0.6669271, 0.6606481)
+texture = ExtResource("4_ce3w2")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1672493985]
 layout_mode = 1

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvddi7qrve2ku"]
 
 [ext_resource type="PackedScene" uid="uid://bsdpsjkul0byw" path="res://Scenes/back_button.tscn" id="1_8p7yn"]
+[ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="1_dxknu"]
 
 [node name="Instructions" type="Control" unique_id=146027722]
 layout_mode = 3
@@ -9,7 +10,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_group_ = true
+
+[node name="KitchenBaseSprite" type="Sprite2D" parent="." unique_id=221338685]
+modulate = Color(0.4915833, 0.49158323, 0.49158323, 1)
+position = Vector2(639.75, 360.25)
+scale = Vector2(0.6669271, 0.6606481)
+texture = ExtResource("1_dxknu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2109065373]
 layout_mode = 1
@@ -44,4 +50,4 @@ If his first spoonful matches his request, he will drink all of the soup. If it 
 autowrap_mode = 3
 
 [node name="BackButton" parent="VBoxContainer" unique_id=638048668 instance=ExtResource("1_8p7yn")]
-position = Vector2(1100, 650)
+position = Vector2(1109.625, 645)

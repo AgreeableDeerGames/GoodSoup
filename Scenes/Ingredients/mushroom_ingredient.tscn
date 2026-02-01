@@ -11,3 +11,6 @@ texture = ExtResource("2_t5tpd")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
+position = Vector2(-0.49999952, -0.5)

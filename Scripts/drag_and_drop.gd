@@ -14,10 +14,6 @@ func _ready() -> void:
 	$Control.size = clickable_area.size
 	$Control.position = clickable_area.position
 
-func set_size(new_size: Vector2) -> void:
-	#Control.size = new_size
-	pass
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# If picked up follow the mouse

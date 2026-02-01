@@ -55,6 +55,7 @@ position = Vector2(280, 117)
 
 [node name="DeadTasters" parent="." unique_id=691247600 instance=ExtResource("10_2cl3g")]
 position = Vector2(-30, 640)
+
 [node name="Cauldron" parent="." unique_id=436779248 instance=ExtResource("10_lkloo")]
 position = Vector2(962, 508)
 metadata/_edit_lock_ = true

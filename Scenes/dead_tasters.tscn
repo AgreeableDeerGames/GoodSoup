@@ -1,34 +1,41 @@
 [gd_scene format=3 uid="uid://b33juydpufhes"]
 
+[ext_resource type="Script" uid="uid://cs85vhpinfpf7" path="res://Scripts/dead_tasters.gd" id="1_dh012"]
 [ext_resource type="Texture2D" uid="uid://b7rdlfnkwpldf" path="res://Assets/TasterDark.png" id="1_ugl5n"]
 
 [node name="DeadTasters" type="Node2D" unique_id=691247600]
+script = ExtResource("1_dh012")
 
 [node name="Taster1" type="Sprite2D" parent="." unique_id=1818416741]
+visible = false
 position = Vector2(144, 266)
 rotation = 3.1415927
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ugl5n")
 
 [node name="Taster2" type="Sprite2D" parent="." unique_id=1811622246]
+visible = false
 position = Vector2(368.00006, 175.00002)
 rotation = -0.65449846
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ugl5n")
 
 [node name="Taster3" type="Sprite2D" parent="." unique_id=1932637277]
+visible = false
 position = Vector2(268.00003, 182)
 rotation = 0.7888888
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ugl5n")
 
 [node name="Taster4" type="Sprite2D" parent="." unique_id=407408460]
+visible = false
 position = Vector2(425.00003, 78.00003)
 rotation = 1.2531464
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ugl5n")
 
 [node name="Taster5" type="Sprite2D" parent="." unique_id=448980308]
+visible = false
 position = Vector2(892.9999, 255.99998)
 rotation = -3.6913714
 scale = Vector2(0.3, 0.3)

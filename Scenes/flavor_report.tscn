@@ -2,12 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://c5avl70qvgues" path="res://Assets/parchment.png" id="1_b5ke7"]
 [ext_resource type="Script" uid="uid://cligny2xyq5jl" path="res://Scripts/flavor_report.gd" id="1_vji58"]
+[ext_resource type="Texture2D" uid="uid://dpiodc7q5hnu5" path="res://Assets/KitchenBase.png" id="2_3ji88"]
 [ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="3_gq7h2"]
 [ext_resource type="StyleBox" uid="uid://c1ffhuf2eiper" path="res://Assets/checkbox.tres" id="4_gq7h2"]
 [ext_resource type="PackedScene" uid="uid://bsdpsjkul0byw" path="res://Scenes/back_button.tscn" id="5_3ji88"]
 
 [node name="FlavorReport" type="Node2D" unique_id=522384576]
 script = ExtResource("1_vji58")
+
+[node name="KitchenBaseSprite" type="Sprite2D" parent="." unique_id=1092525072]
+modulate = Color(0.49019608, 0.49019608, 0.49019608, 1)
+position = Vector2(639.75, 360.25)
+scale = Vector2(0.6669271, 0.6606481)
+texture = ExtResource("2_3ji88")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=771518529]
 offset_right = 40.0

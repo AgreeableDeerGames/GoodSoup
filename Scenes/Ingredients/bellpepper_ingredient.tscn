@@ -6,9 +6,11 @@
 [node name="Ingredient" unique_id=30938857 instance=ExtResource("1_gyh6s")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_0qeu7")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 scale = Vector2(0.4, 0.4)
 clickable_area = Rect2(-50, -100, 140, 200)
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
+position = Vector2(8.5, 3.5)

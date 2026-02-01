@@ -4,8 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	generate_radar_chart()
-	_generate_flavor_pentagon($FlavorData, 10)
-	generate_spice_report($FlavorData)
+	_generate_flavor_pentagon($CenterContainer.get_node("FlavorData"), 10)
+	generate_spice_report($CenterContainer.get_node("FlavorData"))
 	
 
 func _central_angle (side_count: int) -> int:
@@ -20,7 +20,7 @@ func _generate_flavor_pentagon(flavor_data: FlavorData, line_width: int):
 		flavor_data.bitter, \
 		flavor_data.umami], \
 		10,
-		$Sprite2D.position)
+		$CenterContainer.get_node("Sprite2D").position)
 	
 		
 	var flavor_line: Line2D = Line2D.new()

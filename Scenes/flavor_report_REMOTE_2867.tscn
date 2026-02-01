@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dc047nlpryixr"]
+
+[ext_resource type="Texture2D" uid="uid://c5avl70qvgues" path="res://Assets/parchment.png" id="1_b5ke7"]
+[ext_resource type="Script" uid="uid://cligny2xyq5jl" path="res://Scripts/flavor_report.gd" id="1_vji58"]
+[ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="3_gq7h2"]
+
+[node name="FlavorReport" type="Node2D" unique_id=522384576]
+script = ExtResource("1_vji58")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2100698467]
+position = Vector2(641.5, 360.5)
+scale = Vector2(0.66614574, 0.6675926)
+texture = ExtResource("1_b5ke7")
+
+[node name="FlavorData" type="Node" parent="." unique_id=1055033563]
+script = ExtResource("3_gq7h2")
+metadata/_custom_type_script = "uid://mv8g3k23j761"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1474076038]
+position = Vector2(433, 105)
+metadata/_edit_group_ = true
+
+[node name="IngredientsLabel" type="Label" parent="CanvasGroup" unique_id=728855442]
+offset_right = 138.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ingredients used: "
+
+[node name="TasteLabel" type="Label" parent="CanvasGroup" unique_id=573850421]
+offset_left = -4.0
+offset_top = 126.0
+offset_right = 134.0
+offset_bottom = 149.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Core Flavors:"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Sweet" type="Label" parent="CanvasGroup/TasteLabel" unique_id=1824482098]
+layout_mode = 0
+offset_left = 194.0
+offset_right = 332.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sweet"
+
+[node name="Sour" type="Label" parent="CanvasGroup/TasteLabel" unique_id=782792218]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 74.0
+offset_right = 448.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sour"
+
+[node name="Salty" type="Label" parent="CanvasGroup/TasteLabel" unique_id=76256586]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 201.0
+offset_right = 423.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Salty"
+
+[node name="Bitter" type="Label" parent="CanvasGroup/TasteLabel" unique_id=286078941]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 201.0
+offset_right = 241.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bitter"
+
+[node name="Savory" type="Label" parent="CanvasGroup/TasteLabel" unique_id=1432629128]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 85.0
+offset_right = 193.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Savory"
+
+[node name="IngredientsUI" type="GridContainer" parent="CanvasGroup" unique_id=183785629]
+custom_minimum_size = Vector2(50, 50)
+offset_top = 22.0
+offset_right = 479.0
+offset_bottom = 132.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../IngredientsLabel")
+focus_neighbor_bottom = NodePath("../TasteLabel")
+theme_override_constants/h_separation = -5
+theme_override_constants/v_separation = -5
+columns = 7

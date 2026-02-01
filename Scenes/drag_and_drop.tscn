@@ -10,8 +10,6 @@ metadata/_edit_group_ = true
 [node name="Control" type="Control" parent="." unique_id=1712095405]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 26.0
-offset_bottom = 32.0
 script = ExtResource("2_6awkg")
 
 [connection signal="mouse_entered" from="Control" to="Control" method="_on_mouse_entered"]

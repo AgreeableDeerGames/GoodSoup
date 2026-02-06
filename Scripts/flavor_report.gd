@@ -3,7 +3,7 @@ extends Node2D
 class_name FlavorReport
 #@onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
 @onready var ingredients_ui: GridContainer = $CenterContainer/CanvasGroup/IngredientsUI
-
+var _flavor_report_ingredient = preload("res://Scenes/flavor_report_ingredients.tscn")
 var _is_play: bool
 
 @export
@@ -125,12 +125,31 @@ func _process(delta: float) -> void:
 func _generate_ingredients():
 	for ingredient in _ingredients:
 		var ingredientTexture = ingredient.get_node("Sprite2D").texture
-		var textureRect : TextureRect = TextureRect.new()
-		textureRect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		textureRect.texture = ingredientTexture
-		textureRect.custom_minimum_size.x = ingredients_ui.custom_minimum_size.x
-		textureRect.custom_minimum_size.y = ingredients_ui.custom_minimum_size.y
-		ingredients_ui.add_child(textureRect)
+		var found_child_node = _node_find(
+			func(x : Node): return x.texture == ingredientTexture,
+			ingredients_ui
+		)
+		if found_child_node == null:
+			var flavorReportIngredient : FlavorReportIngredients = _flavor_report_ingredient.instantiate()
+			flavorReportIngredient.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			flavorReportIngredient.texture = ingredientTexture
+			flavorReportIngredient.custom_minimum_size.x = ingredients_ui.custom_minimum_size.x
+			flavorReportIngredient.custom_minimum_size.y = ingredients_ui.custom_minimum_size.y
+			ingredients_ui.add_child(flavorReportIngredient)
+			
+			var amountLabel : Node = flavorReportIngredient.get_node("AmountLabel")
+			amountLabel.custom_minimum_size.x = ingredients_ui.custom_minimum_size.x / 4
+			amountLabel.custom_minimum_size.y = ingredients_ui.custom_minimum_size.y / 4
+			amountLabel.increment_amount()
+		else:
+			found_child_node.get_node("AmountLabel").increment_amount()
+
+func _node_find(predicate : Callable, parent_node : Node) -> Node:
+	for child_node in parent_node.get_children():
+		if predicate.call(child_node) == true:
+			return child_node
+	
+	return null
 
 func _populate_flavor_data():
 	if _is_play:

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cbeiup6aneh5" path="res://Scenes/cauldron.tscn" id="10_lkloo"]
 [ext_resource type="Texture2D" uid="uid://72t7ohsy0kjv" path="res://Assets/Bell.png" id="11_ykbxl"]
 [ext_resource type="Script" uid="uid://ce3pwpyutpi88" path="res://Scripts/bell.gd" id="12_32235"]
+[ext_resource type="Script" uid="uid://cya44u8wcdxwj" path="res://Scenes/help_button.gd" id="15_32235"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 script = ExtResource("1_t5hpn")
@@ -30,6 +31,7 @@ position = Vector2(570, 363)
 position = Vector2(639.75, 360.25)
 scale = Vector2(0.6669271, 0.6606481)
 texture = ExtResource("2_23qos")
+metadata/_edit_lock_ = true
 
 [node name="OnionIngredient" parent="." unique_id=1178432824 instance=ExtResource("3_lvc4q")]
 position = Vector2(61, 36)
@@ -77,4 +79,14 @@ offset_top = 494.0
 offset_right = 831.0
 offset_bottom = 550.0
 
+[node name="HelpButton" type="Button" parent="." unique_id=1694035836]
+offset_left = 1203.0
+offset_top = 6.0
+offset_right = 1263.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 25
+text = "Help"
+script = ExtResource("15_32235")
+
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]
+[connection signal="pressed" from="HelpButton" to="HelpButton" method="_on_pressed"]

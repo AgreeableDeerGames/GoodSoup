@@ -14,6 +14,7 @@ scale = Vector2(0.4, 0.4)
 
 [node name="FlavorData" parent="." index="2" unique_id=1040921317]
 sweet = 2.4000000000000004
+umami = 0.9000000000000004
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
 position = Vector2(-2.8800569, -0.2919171)

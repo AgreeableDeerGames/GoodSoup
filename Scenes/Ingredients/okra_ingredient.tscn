@@ -10,3 +10,11 @@ texture = ExtResource("2_ov6v4")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-200, -100, 400, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = 5.0
+umami = 7.399999999999999
+numbing_spice = -6.0
+hot_spice = -4.5
+nasal_spice = -4.5
+richness = 4.6

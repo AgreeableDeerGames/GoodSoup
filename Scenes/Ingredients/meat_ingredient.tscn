@@ -10,3 +10,15 @@ texture = ExtResource("2_0jadx")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-200, -300, 500, 600)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = -2.3
+sour = -3.5
+salty = 4.6
+bitter = -4.0
+umami = 10.0
+numbing_spice = -4.2
+hot_spice = -3.9000000000000004
+nasal_spice = -5.0
+richness = 10.0
+acidity = -5.4

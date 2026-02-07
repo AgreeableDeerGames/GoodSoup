@@ -7,12 +7,23 @@
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 position = Vector2(-2.9999962, -9.536743e-07)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_7pkhv")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 scale = Vector2(0.4, 0.4)
 clickable_area = Rect2(-50, -50, 125, 100)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = 7.0
+sour = 3.1999999999999993
+salty = -2.5999999999999996
+bitter = -3.7
+umami = -4.4
+numbing_spice = -2.5
+hot_spice = -3.0
+nasal_spice = -3.0
+richness = -3.5
+acidity = 4.0
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
 position = Vector2(3.5, 0)

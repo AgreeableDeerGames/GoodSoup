@@ -45,6 +45,13 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and !event.pressed and is_draggable:
 			is_in_drag = false;
 			is_being_dropped = true;
+			# Delete this object if it is not in the cauldron
+			var grandparent : Node = get_parent().get_parent()
+			if grandparent is not Cauldron:
+				if has_spawned_replacement:
+					get_parent().queue_free()
+				else:
+					get_parent().position = original_position
 			
 func _draw():
 	if Engine.is_editor_hint():

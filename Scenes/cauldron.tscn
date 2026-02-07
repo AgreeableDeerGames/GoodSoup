@@ -2,16 +2,27 @@
 
 [ext_resource type="Script" uid="uid://2dvfjjpt8nfh" path="res://Scripts/cauldron.gd" id="1_0t22i"]
 [ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="1_5qdwy"]
+[ext_resource type="Script" uid="uid://cesoh7k5o78vk" path="res://Scenes/clear_ingredients.gd" id="2_r1an6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ljf"]
-size = Vector2(259, 166)
+size = Vector2(280, 179)
 
 [node name="Cauldron" type="Area2D" unique_id=436779248]
 script = ExtResource("1_0t22i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=470096068]
-position = Vector2(119.5, 73)
+position = Vector2(130, 79.5)
 shape = SubResource("RectangleShape2D_q3ljf")
+metadata/_edit_lock_ = true
+
+[node name="ClearIngredients" type="Button" parent="." unique_id=1047493996]
+offset_left = 203.0
+offset_top = 175.0
+offset_right = 262.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 20
+text = "Clear"
+script = ExtResource("2_r1an6")
 
 [node name="Soup" type="Node" parent="." unique_id=1401205555]
 script = ExtResource("1_5qdwy")
@@ -20,3 +31,4 @@ metadata/_custom_type_script = "uid://mv8g3k23j761"
 [node name="Ingredients" type="Node" parent="." unique_id=2142416744]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="pressed" from="ClearIngredients" to="ClearIngredients" method="_on_pressed"]

@@ -39,18 +39,21 @@ theme_override_constants/separation = 20
 [node name="Main Menu Button" type="Button" parent="VBoxContainer" unique_id=739909155]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Main Menu"
 script = ExtResource("1_0d1c8")
 
 [node name="Instructions Button" type="Button" parent="VBoxContainer" unique_id=1849785670]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Instructions"
 script = ExtResource("2_l8lul")
 
 [node name="Back Button" type="Button" parent="VBoxContainer" unique_id=1283053849]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Back"
 script = ExtResource("3_l8lul")
 

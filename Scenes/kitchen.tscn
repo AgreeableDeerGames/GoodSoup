@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://qqxycho4hxne" path="res://Scenes/Ingredients/celery_ingredient.tscn" id="12_r0dk1"]
 [ext_resource type="PackedScene" uid="uid://cpp2rhn57wmgy" path="res://Scenes/Ingredients/chili_peppers_ingredient.tscn" id="13_i6vcq"]
 [ext_resource type="PackedScene" uid="uid://b6u1y61q1qkba" path="res://Scenes/Ingredients/garlic_ingredient.tscn" id="14_bgcuo"]
-[ext_resource type="Script" uid="uid://cya44u8wcdxwj" path="res://Scenes/help_button.gd" id="15_32235"]
+[ext_resource type="Script" uid="uid://cya44u8wcdxwj" path="res://Scripts/help_button.gd" id="15_32235"]
 [ext_resource type="PackedScene" uid="uid://bnej4487dgr4g" path="res://Scenes/Ingredients/ginger_ingredient.tscn" id="15_m1yx5"]
 [ext_resource type="PackedScene" uid="uid://ca7uftblyptfd" path="res://Scenes/Ingredients/lemon_ingredient.tscn" id="16_hc3lq"]
 [ext_resource type="PackedScene" uid="uid://cixw4h5kyxw1c" path="res://Scenes/Ingredients/horseradish_ingredient.tscn" id="22_1i8y3"]

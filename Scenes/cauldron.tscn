@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2dvfjjpt8nfh" path="res://Scripts/cauldron.gd" id="1_0t22i"]
 [ext_resource type="Script" uid="uid://mv8g3k23j761" path="res://Scripts/flavor_data.gd" id="1_5qdwy"]
-[ext_resource type="Script" uid="uid://cesoh7k5o78vk" path="res://Scenes/clear_ingredients.gd" id="2_r1an6"]
+[ext_resource type="Script" uid="uid://cesoh7k5o78vk" path="res://Scripts/clear_ingredients.gd" id="2_r1an6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ljf"]
 size = Vector2(280, 179)

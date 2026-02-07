@@ -4,6 +4,8 @@ class_name FlavorReport
 #@onready var ingredients_ui: GridContainer = $CanvasGroup/IngredientsUI
 @onready var ingredients_ui: GridContainer = $CenterContainer/CanvasGroup/IngredientsUI
 
+var _is_play: bool
+
 @export
 var _ingredients : Array[Ingredient]
 @export
@@ -13,17 +15,19 @@ var _poison_flavor_data : FlavorData
 @export
 var _ingredients_flavor_data : FlavorData
 
-func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data: FlavorData, poision_flavor_data: FlavorData, is_play: bool) -> void:
+const MAX_INGREDIENTS = 100
+
+func setup_scene(ingredients : Array[Ingredient], base_Soup_flavor_data_init: FlavorData, poision_flavor_data: FlavorData, is_play: bool) -> void:
 	_ingredients = ingredients
-	_base_soup_flavor_data = base_Soup_flavor_data
+	_base_soup_flavor_data = base_Soup_flavor_data_init
 	_poison_flavor_data = poision_flavor_data
+	_is_play = is_play
 	if (is_play):
 		$BackButton.hide()
 		$BackButton/HBoxContainer/Button.disabled = true
 		$KitchenButton.show()
 		$KitchenButton/HBoxContainer/Button.disabled = false
 	else:
-		
 		$BackButton.show()
 		$BackButton/HBoxContainer/Button.disabled = false
 		$KitchenButton.hide()
@@ -129,8 +133,11 @@ func _generate_ingredients():
 		ingredients_ui.add_child(textureRect)
 
 func _populate_flavor_data():
-	_populate_ingredient_flavor_data()
-	_combine_flavor_data()
+	if _is_play:
+		$CenterContainer/FlavorData.copy_from(_base_soup_flavor_data)
+	else:
+		_populate_ingredient_flavor_data()
+		_combine_flavor_data()
 	
 func _populate_ingredient_flavor_data():
 	_ingredients_flavor_data = FlavorData.new()
@@ -148,16 +155,16 @@ func _populate_ingredient_flavor_data():
 		#$FlavorData.acidity += ingredient.get_node("FlavorData").acidity
 	
 	# Get the average
-	_ingredients_flavor_data.sour /= _ingredients.size()
-	_ingredients_flavor_data.sweet /= _ingredients.size()
-	_ingredients_flavor_data.salty /= _ingredients.size()
-	_ingredients_flavor_data.bitter /= _ingredients.size()
+	_ingredients_flavor_data.sour /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.sweet /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.salty /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.bitter /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	#_ingredients_flavor_data.umami /= _ingredients.size()
-	_ingredients_flavor_data.numbing_spice /= _ingredients.size()
-	_ingredients_flavor_data.hot_spice /= _ingredients.size()
-	_ingredients_flavor_data.nasal_spice /= _ingredients.size()
-	#_ingredients_flavor_data.richness /= _ingredients.size()
-	#_ingredients_flavor_data.acidity /= _ingredients.size()
+	_ingredients_flavor_data.numbing_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.hot_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.nasal_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	#_ingredients_flavor_data.richness /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	#_ingredients_flavor_data.acidity /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 
 func _combine_flavor_data():
 	$CenterContainer/FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour

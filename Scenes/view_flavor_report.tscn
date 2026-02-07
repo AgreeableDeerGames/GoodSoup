@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://15q1xfhhivco"]
+
+[ext_resource type="Script" uid="uid://c3gqjvaik6wsy" path="res://Scripts/view_flavor_report.gd" id="1_hcssq"]
+[ext_resource type="Texture2D" uid="uid://c5avl70qvgues" path="res://Assets/parchment.png" id="1_l4lm1"]
+
+[node name="ViewFlavorReport" type="TextureButton" unique_id=1354857938]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_l4lm1")
+texture_pressed = ExtResource("1_l4lm1")
+texture_hover = ExtResource("1_l4lm1")
+texture_disabled = ExtResource("1_l4lm1")
+texture_focused = ExtResource("1_l4lm1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_hcssq")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

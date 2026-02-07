@@ -26,6 +26,18 @@ var richness: float = 0
 @export_range(-10, 10, 0.1, "0 - 10")
 var acidity: float = 0
 
+func copy_from(other: FlavorData) -> void:
+	sweet = other.sweet
+	sour = other.sour
+	salty = other.salty
+	bitter = other.bitter
+	umami = other.umami
+	numbing_spice = other.numbing_spice
+	hot_spice = other.hot_spice
+	nasal_spice = other.nasal_spice
+	richness = other.richness
+	acidity = other.acidity
+
 func _flavor_as_array() -> Array[float]:
 	return [sweet, sour, salty, bitter, umami]
 	
@@ -74,3 +86,13 @@ func generate_values():
 	numbing_spice = rng.randf_range(-10, 10)
 	hot_spice = rng.randf_range(-10, 10)
 	nasal_spice = rng.randf_range(-10, 10)
+	
+func generate_pos_values():
+	sour = rng.randf_range(0, 10)
+	sweet = rng.randf_range(0, 10)
+	salty = rng.randf_range(0, 10)
+	bitter = rng.randf_range(0, 10)
+	umami = rng.randf_range(0, 10)
+	numbing_spice = rng.randf_range(0, 10)
+	hot_spice = rng.randf_range(0, 10)
+	nasal_spice = rng.randf_range(0, 10)

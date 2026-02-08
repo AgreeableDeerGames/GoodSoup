@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0dp5kyg2sq13"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_0jadx"]
+[ext_resource type="Texture2D" uid="uid://b1r0m2e7hkdha" path="res://Assets/Meat.PNG" id="2_jler0"]
+
+[node name="MeatIngredient" unique_id=30938857 instance=ExtResource("1_0jadx")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_jler0")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-160, -175, 350, 350)
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
+position = Vector2(2, -1)

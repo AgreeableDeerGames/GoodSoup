@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://piie6ogyqq53"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_i8ql4"]
+[ext_resource type="Texture2D" uid="uid://dvp7kaiyjulxa" path="res://Assets/Bottle.PNG" id="2_jey02"]
+
+[node name="OilIngredient" unique_id=30938857 instance=ExtResource("1_i8ql4")]
+ingredient_name = "oil"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_jey02")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-50, -150, 100, 300)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+umami = 1.0
+richness = 2.0

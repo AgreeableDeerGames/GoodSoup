@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dge2o0jtn0qxu" path="res://Assets/Celery.PNG" id="2_17eif"]
 
 [node name="CeleryIngredient" unique_id=30938857 instance=ExtResource("1_sgigu")]
+ingredient_name = "celery"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 texture = ExtResource("2_17eif")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-100, -110, 210, 275)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+bitter = 3.0

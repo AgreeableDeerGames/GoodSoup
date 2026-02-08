@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ej3pimfbdfit" path="res://Assets/PoisonBottle.png" id="1_pc44i"]
 [ext_resource type="Script" uid="uid://ck16ymroqhny3" path="res://Scripts/ingredient.gd" id="1_vp2j4"]
 [ext_resource type="PackedScene" uid="uid://cv0jr4yvt1op" path="res://Scenes/flavor_data.tscn" id="4_vp2j4"]
+[ext_resource type="Script" uid="uid://jn0owfsagjnu" path="res://Scripts/ingredient_label.gd" id="5_ww4r6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp2j4"]
 size = Vector2(59, 83)
@@ -28,3 +29,20 @@ clickable_area = Rect2(-50, -100, 100, 200)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1922979589]
 position = Vector2(3.5, 3.5)
 shape = SubResource("RectangleShape2D_vp2j4")
+
+[node name="IngredientLabel" type="Label" parent="." unique_id=855019090]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = 21.0
+offset_right = 36.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "label"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_ww4r6")

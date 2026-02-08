@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://5lci2snmdl1o" path="res://Assets/Horseradish.PNG" id="2_r0or7"]
 
 [node name="HorseradishIngredient" unique_id=30938857 instance=ExtResource("1_ymw3s")]
+ingredient_name = "horseradish"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 texture = ExtResource("2_r0or7")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-180, -100, 360, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+nasal_spice = 3.0

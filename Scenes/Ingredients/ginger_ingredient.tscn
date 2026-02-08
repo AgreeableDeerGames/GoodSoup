@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://du0sfbt3qbwv4" path="res://Assets/Ginger.PNG" id="2_bpkkj"]
 
 [node name="GingerIngredient" unique_id=30938857 instance=ExtResource("1_7phq6")]
+ingredient_name = "ginger"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 texture = ExtResource("2_bpkkj")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-180, -100, 360, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+nasal_spice = 2.0

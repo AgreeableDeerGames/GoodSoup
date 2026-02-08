@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tce6jugwjmxy"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_7noel"]
+[ext_resource type="Texture2D" uid="uid://dvp7kaiyjulxa" path="res://Assets/Bottle.PNG" id="2_vq5do"]
+
+[node name="WaterIngredient" unique_id=30938857 instance=ExtResource("1_7noel")]
+ingredient_name = "water"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_vq5do")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-50, -150, 100, 300)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = -1.0
+sour = -1.0
+salty = -1.0
+bitter = -1.0
+umami = -1.0
+numbing_spice = -1.0
+hot_spice = -1.0
+nasal_spice = -1.0
+richness = -1.0
+acidity = -1.0

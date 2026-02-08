@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ci58u61p2d18l" path="res://Assets/ChiliPeppers.PNG" id="2_4rck6"]
 
 [node name="ChiliPeppersIngredient" unique_id=30938857 instance=ExtResource("1_q6ukn")]
+ingredient_name = "chili peppers"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 scale = Vector2(0.5, 0.5)
@@ -11,3 +12,6 @@ texture = ExtResource("2_4rck6")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-120, -150, 220, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+hot_spice = 2.0

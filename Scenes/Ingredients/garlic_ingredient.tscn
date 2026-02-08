@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6u1y61q1qkba"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_ep77b"]
+[ext_resource type="Texture2D" uid="uid://6b0osa1psscd" path="res://Assets/Garlic.PNG" id="2_ubwgf"]
+
+[node name="GarlicIngredient" unique_id=30938857 instance=ExtResource("1_ep77b")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_ubwgf")
+offset = Vector2(40, 0)

@@ -4,9 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://cq4xux00flcr6" path="res://Assets/Cream.PNG" id="2_prg1p"]
 
 [node name="CreamIngredient" unique_id=30938857 instance=ExtResource("1_xfc60")]
+ingredient_name = "cream"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 texture = ExtResource("2_prg1p")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 clickable_area = Rect2(-160, -100, 330, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+hot_spice = -1.0
+nasal_spice = -1.0
+richness = 3.0

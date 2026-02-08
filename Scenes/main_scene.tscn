@@ -10,6 +10,5 @@ metadata/_edit_group_ = true
 [node name="SceneManager" parent="." unique_id=1030478623 instance=ExtResource("2_6l7je")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=917881397]
-volume_db = -80.0
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

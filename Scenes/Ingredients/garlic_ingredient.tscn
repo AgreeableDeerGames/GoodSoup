@@ -4,7 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://6b0osa1psscd" path="res://Assets/Garlic.PNG" id="2_ubwgf"]
 
 [node name="GarlicIngredient" unique_id=30938857 instance=ExtResource("1_ep77b")]
+ingredient_name = "garlic"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
 texture = ExtResource("2_ubwgf")
 offset = Vector2(40, 0)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+nasal_spice = 1.0
+
+[node name="IngredientLabel" parent="." index="4" unique_id=855019090]
+offset_left = -36.0
+offset_top = 8.0
+offset_right = 38.0
+offset_bottom = 31.0

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://de5t0i7o4yi02"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_h0te8"]
+[ext_resource type="Texture2D" uid="uid://pfynn786sg65" path="res://Assets/SichuanPeppercorns.PNG" id="2_6dpk3"]
+
+[node name="SichuanPeppercornsIngredient" unique_id=30938857 instance=ExtResource("1_h0te8")]
+ingredient_name = "sichuan peppercorns"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+position = Vector2(4.000002, 0)
+scale = Vector2(0.2, 0.193)
+texture = ExtResource("2_6dpk3")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-50, -150, 100, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+numbing_spice = 2.0
+
+[node name="IngredientLabel" parent="." index="4" unique_id=855019090]
+offset_left = -34.0
+offset_top = 7.0
+offset_right = 40.0
+offset_bottom = 30.0

@@ -4,14 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://dit6v8eu05fce" path="res://Assets/Carrot.PNG" id="2_o51y5"]
 
 [node name="Ingredient" unique_id=30938857 instance=ExtResource("1_w3uad")]
+ingredient_name = "carrot"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1785830097]
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_o51y5")
 
 [node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
 rotation = 0.70685834
 scale = Vector2(0.4, 0.4)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+sweet = 1.0
+bitter = 1.0
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(925610405) index="0" unique_id=1922979589]
 position = Vector2(-2.8800569, -0.2919171)

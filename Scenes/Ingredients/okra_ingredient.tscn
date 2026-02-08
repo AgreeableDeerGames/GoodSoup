@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2mj2l73iamkn"]
+
+[ext_resource type="PackedScene" uid="uid://d1kyunudgoq0v" path="res://Scenes/ingredient.tscn" id="1_ov6v4"]
+[ext_resource type="Texture2D" uid="uid://sewbgk7octft" path="res://Assets/Okra.PNG" id="2_vwk81"]
+
+[node name="OkraIngredient" unique_id=30938857 instance=ExtResource("1_ov6v4")]
+ingredient_name = "okra"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1785830097]
+texture = ExtResource("2_vwk81")
+
+[node name="DragAndDrop" parent="." index="1" unique_id=1088639070]
+clickable_area = Rect2(-160, -100, 330, 200)
+
+[node name="FlavorData" parent="." index="2" unique_id=1040921317]
+bitter = 3.0
+numbing_spice = -1.0
+hot_spice = -1.0
+nasal_spice = -1.0

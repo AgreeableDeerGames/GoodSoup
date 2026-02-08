@@ -14,7 +14,7 @@ func _on_pressed() -> void:
 	var ingredients : Array[Ingredient]
 	for node in ingredientsNodes:
 		if typeof(node) == typeof(Ingredient):
-			var i : Ingredient = node
+			var i : Ingredient = node.duplicate()
 			ingredients.append(i)
 			
 	var soup : FlavorData = FlavorData.new()

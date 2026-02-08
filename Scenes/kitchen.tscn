@@ -21,7 +21,14 @@
 [ext_resource type="Script" uid="uid://cya44u8wcdxwj" path="res://Scripts/help_button.gd" id="15_32235"]
 [ext_resource type="PackedScene" uid="uid://bnej4487dgr4g" path="res://Scenes/Ingredients/ginger_ingredient.tscn" id="15_m1yx5"]
 [ext_resource type="PackedScene" uid="uid://ca7uftblyptfd" path="res://Scenes/Ingredients/lemon_ingredient.tscn" id="16_hc3lq"]
+[ext_resource type="PackedScene" uid="uid://d0dp5kyg2sq13" path="res://Scenes/Ingredients/meat_ingredient.tscn" id="18_hc3lq"]
 [ext_resource type="PackedScene" uid="uid://cixw4h5kyxw1c" path="res://Scenes/Ingredients/horseradish_ingredient.tscn" id="22_1i8y3"]
+[ext_resource type="PackedScene" uid="uid://piie6ogyqq53" path="res://Scenes/Ingredients/oil_ingredient.tscn" id="24_j87t8"]
+[ext_resource type="PackedScene" uid="uid://2mj2l73iamkn" path="res://Scenes/Ingredients/okra_ingredient.tscn" id="25_3287f"]
+[ext_resource type="PackedScene" uid="uid://de5t0i7o4yi02" path="res://Scenes/Ingredients/sichuan_peppercorns_ingredient.tscn" id="26_ra1nx"]
+[ext_resource type="PackedScene" uid="uid://dycy3ml36ovbn" path="res://Scenes/Ingredients/sugar_ingredient.tscn" id="27_rdhyb"]
+[ext_resource type="PackedScene" uid="uid://5vg5tx6218jh" path="res://Scenes/Ingredients/wine_ingredient.tscn" id="28_wj3rr"]
+[ext_resource type="PackedScene" uid="uid://tce6jugwjmxy" path="res://Scenes/Ingredients/water_ingredient.tscn" id="29_3287f"]
 
 [node name="Kitchen" type="Node2D" unique_id=355883739]
 script = ExtResource("1_t5hpn")
@@ -76,6 +83,27 @@ position = Vector2(173, 289)
 [node name="LemonIngredient" parent="." unique_id=396544083 instance=ExtResource("16_hc3lq")]
 position = Vector2(51, 373)
 
+[node name="HorseradishIngredient" parent="." unique_id=1173403968 instance=ExtResource("22_1i8y3")]
+position = Vector2(282, 290)
+
+[node name="MeatIngredient" parent="." unique_id=1240437411 instance=ExtResource("18_hc3lq")]
+position = Vector2(176, 361)
+
+[node name="OilIngredient" parent="." unique_id=1872968235 instance=ExtResource("24_j87t8")]
+position = Vector2(285, 359)
+
+[node name="WineIngredient" parent="." unique_id=1568404509 instance=ExtResource("28_wj3rr")]
+position = Vector2(52, 524)
+
+[node name="WaterIngredient" parent="." unique_id=1057852137 instance=ExtResource("29_3287f")]
+position = Vector2(168, 527)
+
+[node name="OkraIngredient" parent="." unique_id=932641576 instance=ExtResource("25_3287f")]
+position = Vector2(49, 450)
+
+[node name="SichuanPeppercornsIngredient" parent="." unique_id=1160402470 instance=ExtResource("26_ra1nx")]
+position = Vector2(170, 456)
+
 [node name="DeadTasters" parent="." unique_id=691247600 instance=ExtResource("10_2cl3g")]
 position = Vector2(-30, 640)
 
@@ -114,8 +142,8 @@ theme_override_font_sizes/font_size = 25
 text = "Help"
 script = ExtResource("15_32235")
 
-[node name="HorseradishIngredient" parent="." unique_id=1173403968 instance=ExtResource("22_1i8y3")]
-position = Vector2(282, 290)
+[node name="SugarIngredient" parent="." unique_id=1425246834 instance=ExtResource("27_rdhyb")]
+position = Vector2(290, 447)
 
 [connection signal="pressed" from="Bell" to="Bell" method="_on_pressed"]
 [connection signal="pressed" from="HelpButton" to="HelpButton" method="_on_pressed"]

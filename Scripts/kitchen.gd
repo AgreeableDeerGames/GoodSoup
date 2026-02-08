@@ -10,7 +10,7 @@ func setup_scene(soup: FlavorData):
 func generate_poison() -> FlavorData:
 	poison = FlavorData.new()
 	const MAX_TARGET_VALUE: int = 6
-	const MIN_TARGET_VALUE: int = -3
+	const MIN_TARGET_VALUE: int = 0
 	var rng = RandomNumberGenerator.new()
 	poison.sour = rng.randf_range(MIN_TARGET_VALUE, MAX_TARGET_VALUE)
 	poison.sweet = rng.randf_range(MIN_TARGET_VALUE, MAX_TARGET_VALUE)

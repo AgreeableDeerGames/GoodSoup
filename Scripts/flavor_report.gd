@@ -165,25 +165,24 @@ func _populate_ingredient_flavor_data():
 		_ingredients_flavor_data.sweet += ingredient.get_node("FlavorData").sweet
 		_ingredients_flavor_data.salty += ingredient.get_node("FlavorData").salty
 		_ingredients_flavor_data.bitter += ingredient.get_node("FlavorData").bitter
-		# For some reason it does not like unami
-		#_ingredients_flavor_data.umami += ingredient.get_node("FlavorData").unami
+		_ingredients_flavor_data.umami += ingredient.get_node("FlavorData").unami
 		_ingredients_flavor_data.numbing_spice += ingredient.get_node("FlavorData").numbing_spice
 		_ingredients_flavor_data.hot_spice += ingredient.get_node("FlavorData").hot_spice
 		_ingredients_flavor_data.nasal_spice += ingredient.get_node("FlavorData").nasal_spice
-		#$FlavorData.richness += ingredient.get_node("FlavorData").richness
-		#$FlavorData.acidity += ingredient.get_node("FlavorData").acidity
+		_ingredients_flavor_data.richness += ingredient.get_node("FlavorData").richness
+		_ingredients_flavor_data.acidity += ingredient.get_node("FlavorData").acidity
 	
 	# Get the average
 	_ingredients_flavor_data.sour /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	_ingredients_flavor_data.sweet /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	_ingredients_flavor_data.salty /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	_ingredients_flavor_data.bitter /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
-	#_ingredients_flavor_data.umami /= _ingredients.size()
+	_ingredients_flavor_data.umami /= _ingredients.size()
 	_ingredients_flavor_data.numbing_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	_ingredients_flavor_data.hot_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 	_ingredients_flavor_data.nasal_spice /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
-	#_ingredients_flavor_data.richness /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
-	#_ingredients_flavor_data.acidity /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.richness /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
+	_ingredients_flavor_data.acidity /= clampi(_ingredients.size(), 1, MAX_INGREDIENTS)
 
 func _combine_flavor_data():
 	$CenterContainer/FlavorData.sour = _ingredients_flavor_data.sour + _base_soup_flavor_data.sour + _poison_flavor_data.sour
